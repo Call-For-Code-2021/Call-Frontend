@@ -40,8 +40,8 @@ height: 400px;
 margin : 100px 100px 0 130%;
 `;
 
-// const Head = styled.h1`
-// text-align: center;
-// `
+const Head = styled.h1`
+text-align: center;
+`
 
 export default Map;
