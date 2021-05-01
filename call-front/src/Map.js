@@ -17,7 +17,7 @@ class Map extends React.Component{
           let container = document.getElementById("map");
           let options = {
             center: new kakao.maps.LatLng(37.506502, 127.053617),
-            level: 7
+            level: 5
           };
   
           const map = new window.kakao.maps.Map(container, options);
@@ -35,13 +35,12 @@ class Map extends React.Component{
     }
 }
 const Maps = styled.div`
-width: 400px;
-height: 400px;
-margin : 100px 100px 0 130%;
+width: 1200px;
+height: 600px;
 `;
 
-const Head = styled.h1`
-text-align: center;
-`
+// const Head = styled.h1`
+// text-align: center;
+// `
 
 export default Map;
