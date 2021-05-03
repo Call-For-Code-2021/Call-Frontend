@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Map from './Map.js'
+// import Map from './Map.js'
+// import PopUp from './PopUp.js'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Map/>
+    {/* <Map/>
+    <PopUp/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
