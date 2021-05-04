@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import "./index.css"
+import './index.css';
+import Map from './Map1.js';
+//import Map1 from './Map1.js';
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <App/>,
