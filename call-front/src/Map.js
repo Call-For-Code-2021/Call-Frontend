@@ -12,30 +12,33 @@ class Map extends React.Component{
           "https://dapi.kakao.com/v2/maps/sdk.js?appkey=9a479b0eafcdbddcf0219e5a2018a610&libraries=LIBRARY";
         document.head.appendChild(script);
 
-      script.onload = () => {
+        script.onload = () => {
         kakao.maps.load(() => {
-          let container = document.getElementById("map");
-          let options = {
-            center: new kakao.maps.LatLng(37.62759, 126.92315),
-            level: 5
-          };
+            let container = document.getElementById("map");
+            let options = {
+                center: new kakao.maps.LatLng(37.62759, 126.92315),
+                level: 5
+            };
   
-          const map = new window.kakao.maps.Map(container, options);
+            const map = new window.kakao.maps.Map(container, options);
 
-          //마커가 표시 될 위치
-          let markerPosition = new kakao.maps.LatLng(
-            37.62759,
-            126.92315
-          );
+            //마커가 표시 될 위치
+            let markerPosition = new kakao.maps.LatLng(
+                37.62759,
+                126.92315
+            );
 
-          // 마커를 생성
-          let marker = new kakao.maps.Marker({
-            position: markerPosition,
-          });
+            // 마커를 생성
+            let marker = new kakao.maps.Marker({
+                position: markerPosition,
+            });
 
-          // 마커를 지도 위에 표시
-          marker.setMap(map);
-
+            // 마커를 지도 위에 표시
+            marker.setMap(map);
+            // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
+            function closeOverlay() {
+                overlay.setMap(null);
+            }
             let content = '<div class="wrap">' +
                 '    <div class="info">' +
                 '        <div class="title">' +
@@ -64,11 +67,6 @@ class Map extends React.Component{
             kakao.maps.event.addListener(marker, 'click', function() {
                 overlay.setMap(map);
             });
-
-            // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
-            function closeOverlay() {
-                overlay.setMap(null);
-            }
         });
         
       };
