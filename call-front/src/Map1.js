@@ -19,6 +19,11 @@ class Map2 extends React.Component{
             center: new kakao.maps.LatLng(37.62759, 126.92315),
             level: 5
           };
+
+          // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
+          function closeOverlay() {
+            overlay.setMap(null);
+        }
   
           const map = new window.kakao.maps.Map(container, options);
 
@@ -40,7 +45,7 @@ class Map2 extends React.Component{
                 '    <div class="info">' +
                 '        <div class="title">' +
                 '            카카오 스페이스닷원' +
-                '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
+                `            <div class="close" onclick="${closeOverlay()}" title="닫기">ddd</div>` +
                 '        </div>' +
                 '        <div class="body" style="background-color: whitesmoke">' +
                 '            <div class="img">' +
@@ -65,10 +70,7 @@ class Map2 extends React.Component{
                 overlay.setMap(map);
             });
 
-            // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
-            function closeOverlay() {
-                overlay.setMap(null);
-            }
+            
         });
         
       };
