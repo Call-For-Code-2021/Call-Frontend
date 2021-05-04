@@ -33,17 +33,17 @@ class Map extends React.Component{
                 position: markerPosition,
             });
 
+            function ov() {
+                closeOverlay();
+            }
+
             // 마커를 지도 위에 표시
             marker.setMap(map);
-            // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
-            function closeOverlay() {
-                overlay.setMap(null);
-            }
             let content = '<div class="wrap">' +
                 '    <div class="info">' +
                 '        <div class="title">' +
                 '            카카오 스페이스닷원' +
-                '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
+                `            <div class="close" onclick="${ov()}" title="닫기" style="background-color: white; border-radius: 5px;">X</div>` +
                 '        </div>' +
                 '        <div class="body" style="background-color: whitesmoke; border-radius: 10px;">' +
                 '            <div class="img" style="margin-left: 5px; margin-top: 10px;">' +
@@ -57,11 +57,16 @@ class Map extends React.Component{
                 '        </div>' +
                 '    </div>' +
                 '</div>';
-            let overlay = new kakao.maps.CustomOverlay({
+            var overlay = new kakao.maps.CustomOverlay({
                 content: content,
                 map: map,
                 position: marker.getPosition()
             });
+
+            // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
+            function closeOverlay() {
+                overlay.setMap(null);
+            }
 
             // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
             kakao.maps.event.addListener(marker, 'click', function() {
