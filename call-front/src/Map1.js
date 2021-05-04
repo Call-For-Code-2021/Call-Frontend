@@ -1,97 +1,91 @@
-import React from 'react';
-import styled from "styled-components";
+import React from "react";
+import ReactDOM from 'react-dom';
 
-/*global kakao*/
+var map;
+var markers=[];
+var infowindow;
+const API_KEY = "AIzaSyDUwBsbGmTj_JAIxGS_UcUh9Q0wn5woGus" ;
 
-class Map2 extends React.Component{
+class Map extends React.Component {
+  constructor(props) { 
+    super(props);
+    this.onScriptLoad = this.onScriptLoad.bind(this);
+  }
 
-    componentDidMount() {
-        const script = document.createElement("script");
-        script.async = true;
-        script.src =
-          "https://dapi.kakao.com/v2/maps/sdk.js?appkey=9a479b0eafcdbddcf0219e5a2018a610&libraries=LIBRARY";
-        document.head.appendChild(script);
 
-      script.onload = () => {
-        kakao.maps.load(() => {
-          let container = document.getElementById("map");
-          let options = {
-            center: new kakao.maps.LatLng(37.62759, 126.92315),
-            level: 5
-          };
+  onScriptLoad() {
+      var locations = [
+            ['Bondi Beach', -33.890542, 151.274856, 4],
+            ['Coogee Beach', -33.923036, 151.259052, 5],
+            ['Cronulla Beach', -34.028249, 151.157507, 3],
+            ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+            ['Maroubra BeachManly Beach Manly Beach Manly Beach', -33.950198, 151.259302, 1]
+        ];
+      var mapOptions = {
+            zoom: 10,
+            center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+            scrollwheel: true,
+        };   
+    map = new window.google.maps.Map(document.getElementById(this.props.id), mapOptions);
+    this.props.onMapLoad(map)
 
-          // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
-          function closeOverlay() {
-            overlay.setMap(null);
+       for (var count = 0; count < locations.length; count++) {
+         var name = locations[count][0];
+         var loc =  new google.maps.LatLng(locations[count][1], locations[count][2]);
+            this.createMarker(name,loc);
         }
-  
-          const map = new window.kakao.maps.Map(container, options);
+  }
 
-          //마커가 표시 될 위치
-          let markerPosition = new kakao.maps.LatLng(
-            37.62759,
-            126.92315
-          );
-
-          // 마커를 생성
-          let marker = new kakao.maps.Marker({
-            position: markerPosition,
-          });
-
-          // 마커를 지도 위에 표시
-          marker.setMap(map);
-
-            let content = '<div class="wrap">' +
-                '    <div class="info">' +
-                '        <div class="title">' +
-                '            카카오 스페이스닷원' +
-                `            <div class="close" onclick="${closeOverlay()}" title="닫기">ddd</div>` +
-                '        </div>' +
-                '        <div class="body" style="background-color: whitesmoke">' +
-                '            <div class="img">' +
-                '                <img src="https://cfile181.uf.daum.net/image/250649365602043421936D" width="73" height="70">' +
-                '           </div>' +
-                '            <div class="desc">' +
-                '                <div class="ellipsis">제주특별자치도 제주시 첨단로 242</div>' +
-                '                <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>' +
-                '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' +
-                '            </div>' +
-                '        </div>' +
-                '    </div>' +
-                '</div>';
-            let overlay = new kakao.maps.CustomOverlay({
-                content: content,
-                map: map,
-                position: marker.getPosition()
-            });
-
-            // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-            kakao.maps.event.addListener(marker, 'click', function() {
-                overlay.setMap(map);
-            });
-
-            
-        });
-        
-      };
-      
+  componentDidMount() {
+    if (!window.google) {
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = `https://maps.googleapis.com/maps/api/js?key=`+API_KEY+`&libraries=places,geometry`;
+      script.id = 'googleMaps';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+      script.addEventListener('load', e => {
+        this.onScriptLoad()
+      })
     }
-    render(){
-        return(
-            <>
-            <Maps id="map">
-            </Maps>
-            </>
-        )
+    else {
+      this.onScriptLoad()
     }
+    var marker = new google.maps.Marker({
+      position: { lat: -25.344, lng: 131.036 },
+      map: map
+    });
+  }
+
+  createMarker(name,loc) {
+    var marker = new google.maps.Marker({
+      map: map,
+      position: loc,
+      title: name
+
+    });
+    markers.push(marker);
+
+    infowindow = new google.maps.InfoWindow();
+    var content =
+      'Location: ' + name +
+      '<br/>Lat: ' + loc.lat() +
+      '<br/>Long: ' + loc.lng() ;
+
+    marker.addListener('click', ()=>{     
+      infowindow.setContent(content);  
+      infowindow.open(map, marker); 
+    });
+  }
+
+  render() {
+    return (
+      <div id="root">
+      <div className="map" id={this.props.id} />
+      </div>
+    )
+  }
 }
-const Maps = styled.div`
-width: 1900px;
-height: 600px;
-`;
 
-// const Head = styled.h1`
-// text-align: center;
-// `
-
-export default Map2;
+export default Map;
