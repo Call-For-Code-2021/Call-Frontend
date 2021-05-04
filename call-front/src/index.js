@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import MapCreate from './MapCreate.js'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    
+    <MapCreate/>
   </React.StrictMode>,
   document.getElementById('root')
 );
