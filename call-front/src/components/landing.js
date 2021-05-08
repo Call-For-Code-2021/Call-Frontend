@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function landing(){
     return (
         <div className="query_section">
-            <h1>Query</h1>
+            <Link className="nav-link" to="/map_main">맵으로</Link>
         </div>
     );
 
