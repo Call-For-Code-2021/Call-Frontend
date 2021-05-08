@@ -1,12 +1,12 @@
 import React from 'react';
 
-function login_main(){
+function mypage(){
     return (
         <div className="query_section">
-            <h1>LOGIN</h1>
+            <h1>MYPAGE</h1>
         </div>
     );
 
 }
 
-export default login_main;
+export default mypage;
