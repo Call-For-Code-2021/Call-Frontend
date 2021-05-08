@@ -13,7 +13,7 @@ const MapContainer = ({ searchPlace }) => {
         const container = document.getElementById('myMap');
 		const options = {
 			center: new kakao.maps.LatLng(37.62760, 126.92368), 
-			level: 6,
+			level: 3,
 		};
         const map = new kakao.maps.Map(container, options);
     
@@ -37,7 +37,7 @@ const MapContainer = ({ searchPlace }) => {
         function displayMarker(place) {
             let marker = new kakao.maps.Marker({
                 map: map,
-                position: new kakao.maps.LatLng(37.62760, 126.92368) 
+                position: new kakao.maps.LatLng(place.y, place.x) 
             });
 
             // 마커에 클릭이벤트를 등록
