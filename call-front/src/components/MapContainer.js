@@ -1,60 +1,129 @@
-// MapContainer.js
+import React, { useEffect, useState } from 'react'
 
-import React, { useEffect } from 'react';
-
-const { kakao } = window;
-
+const { kakao } = window
 
 const MapContainer = ({ searchPlace }) => {
 
-    useEffect(() => {
-        let infowindow = new kakao.maps.InfoWindow({zIndex:1});
+  // 검색결과 배열에 담아줌
+  const [Places, setPlaces] = useState([])
+  
+  useEffect(() => {
+    var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 })
+    var markers = []
+    const container = document.getElementById('myMap')
+    const options = {
+      center: new kakao.maps.LatLng(39.06325070858484, 125.78908093491707),
+      level: 6,
+    }
+    const map = new kakao.maps.Map(container, options)
 
-        const container = document.getElementById('myMap');
-		const options = {
-			center: new kakao.maps.LatLng(37.62760, 126.92368), 
-			level: 3,
-		};
-        const map = new kakao.maps.Map(container, options);
+    const ps = new kakao.maps.services.Places()
+
+    ps.keywordSearch(searchPlace, placesSearchCB)
+
+    function placesSearchCB(data, status, pagination) {
+        if (status === kakao.maps.services.Status.OK) {
+            let bounds = new kakao.maps.LatLngBounds()
     
-    	const ps = new kakao.maps.services.Places(); 
-
-        ps.keywordSearch(searchPlace, placesSearchCB);
-
-        function placesSearchCB(data, status, pagination) {
-            if (status === kakao.maps.services.Status.OK) {
-                let bounds = new kakao.maps.LatLngBounds();
 
             for (let i = 0; i < data.length; i++) {
-                displayMarker(data[i]);
-                bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+                displayMarker(data[i])
+                bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x))
             }
 
-            map.setBounds(bounds);
+            map.setBounds(bounds)
+            // 페이지 목록 보여주는 displayPagination() 추가
+            displayPagination(pagination)
+            setPlaces(data)
+        }
+      
+        else if (status === kakao.maps.services.Status.ZERO_RESULT) {
+            alert('검색 결과가 존재하지 않습니다.');
+            return;
+        } 
+
+        else if (status === kakao.maps.services.Status.ERROR) {
+            alert('검색 결과 중 오류가 발생했습니다.');
+            return;
+        }
+        
+    }
+
+    // 검색결과 목록 하단에 페이지 번호 표시
+    function displayPagination(pagination) {
+      var paginationEl = document.getElementById('pagination'),
+        fragment = document.createDocumentFragment(),
+        i
+
+      // 기존에 추가된 페이지 번호 삭제
+      while (paginationEl.hasChildNodes()) {
+        paginationEl.removeChild(paginationEl.lastChild)
+      }
+
+      for (i = 1; i <= pagination.last; i++) {
+        var el = document.createElement('a')
+        el.href = '#'
+        el.innerHTML = i
+
+        if (i === pagination.current) {
+          el.className = 'on'
+        } else {
+          el.onclick = (function (i) {
+            return function () {
+              pagination.gotoPage(i)
             }
+          })(i)
         }
 
-        function displayMarker(place) {
-            let marker = new kakao.maps.Marker({
-                map: map,
-                position: new kakao.maps.LatLng(place.y, place.x) 
-            });
+        fragment.appendChild(el)
+      }
+      paginationEl.appendChild(fragment)
+    }
 
-            // 마커에 클릭이벤트를 등록
-            kakao.maps.event.addListener(marker, 'click', function() {
-                // 마커를 클릭하면 장소명이 인포윈도우에 표출
-                infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
-                infowindow.open(map, marker);
-            });
-        }
-    }, [searchPlace]);
+    function displayMarker(place) {
+      let marker = new kakao.maps.Marker({
+        map: map,
+        position: new kakao.maps.LatLng(place.y, place.x),
+      })
 
-    return (
-        <div id='myMap' style={{
-            width: '800px', 
-            height: '800px'
-        }}></div>
-    );
+      kakao.maps.event.addListener(marker, 'click', function () {
+        infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>')
+        infowindow.open(map, marker)
+      })
+    }
+  }, [searchPlace])
+
+  return (
+    <div>
+      <div
+        id="myMap"
+        style={{
+          width: '500px',
+          height: '500px',
+        }}
+      ></div>
+      <div id="result-list">
+        {Places.map((item, i) => (
+          <div key={i} style={{ marginTop: '20px' }}>
+            <span>{i + 1}</span>
+            <div>
+              <h5>{item.place_name}</h5>
+              {item.road_address_name ? (
+                <div>
+                  <span>{item.road_address_name}</span>
+                  <span>{item.address_name}</span>
+                </div>
+              ) : (
+                <span>{item.address_name}</span>
+              )}
+              <span>{item.phone}</span>
+            </div>
+          </div>
+        ))}
+        <div id="pagination"></div>
+      </div>
+    </div>
+  )
 }
 
-export default MapContainer;
+export default MapContainer
