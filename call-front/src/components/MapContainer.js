@@ -13,7 +13,7 @@ const MapContainer = ({ searchPlace }) => {
     const container = document.getElementById('myMap')
     const options = {
       center: new kakao.maps.LatLng(37.57813143829081, 126.9773018596565),
-      level: 6,
+      level: 5,
     }
     const map = new kakao.maps.Map(container, options)
 
@@ -104,7 +104,7 @@ const MapContainer = ({ searchPlace }) => {
       ></div>
       <div id="result-list">
         {Places.map((item, i) => (
-          <div key={i} style={{ marginTop: '20px' }}>
+          <div key={i} style={{ marginTop: '20px'}}>
             <span>{i + 1}</span>
             <div>
               <h5>{item.place_name}</h5>
