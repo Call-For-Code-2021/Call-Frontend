@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
+import './MapContainer.css';
+
 const { kakao } = window
 
 const MapContainer = ({ searchPlace }) => {
@@ -9,7 +11,6 @@ const MapContainer = ({ searchPlace }) => {
   
   useEffect(() => {
     var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 })
-    var markers = []
     const container = document.getElementById('myMap')
     const options = {
       center: new kakao.maps.LatLng(37.57813143829081, 126.9773018596565),
