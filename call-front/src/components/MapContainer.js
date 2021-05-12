@@ -9,10 +9,11 @@ const MapContainer = ({ searchPlace }) => {
   
   useEffect(() => {
     var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 })
+    var markers = []
     const container = document.getElementById('myMap')
     const options = {
       center: new kakao.maps.LatLng(37.57813143829081, 126.9773018596565),
-      level: 6,
+      level: 5,
     }
     const map = new kakao.maps.Map(container, options)
 
@@ -97,8 +98,8 @@ const MapContainer = ({ searchPlace }) => {
       <div
         id="myMap"
         style={{
-          width: '1700px',
-          height: '800px',
+          width: '500px',
+          height: '500px',
         }}
       ></div>
       <div id="result-list">
