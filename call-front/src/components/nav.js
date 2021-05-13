@@ -7,14 +7,15 @@ function nav(){
         <div className="nav-container">
             <div className="nav-child">
                 <Link className="nav-link" to="/map_main">
-                    <img src="./img/home.png" alt="home"/>
+                    <div id="img1"></div>
                     HOME
                 </Link>
             </div>
             <div className="nav-child">
                 <Link className="nav-link" to="/query">
-                    <img src="./img/loupe.png" alt="search"></img>
+                    <img src="./img/home.png" alt="search"></img>
                     SEARCH
+                    
                 </Link>
             </div>
             <div className="nav-child">

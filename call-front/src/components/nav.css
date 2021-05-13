@@ -14,3 +14,8 @@
     width: 200px;
     height: 200px;
 }
+#img1{
+    background-image: url("./img/home.png");
+    width: 20px;
+    height: 20px;
+}
