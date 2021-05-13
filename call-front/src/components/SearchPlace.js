@@ -22,13 +22,16 @@ const SearchPlace = () => {
   return (
     <>
       <div className="inputForm-con">
-        <form className="inputForm" onSubmit={handleSubmit}>
+        <form className="inputForm d-flex" onSubmit={handleSubmit}>
           <input
+              className="form-control me-2"
+              type="search"
               placeholder="Search Place..."
+              aria-label="Search"
               onChange={onChange}
               value={inputText}
           />
-          <button type="submit">검색</button>
+          <button className="btn btn-outline-success" type="submit">검색</button>
         </form>
       </div>
       <MapContainer searchPlace={place} />
