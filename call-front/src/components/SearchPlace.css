@@ -1,0 +1,14 @@
+.inputForm-con {
+    width: 100%;
+    height: auto;
+}
+
+.inputForm {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.inputForm > input {
+    width: 400px;
+    height: 19px;
+}

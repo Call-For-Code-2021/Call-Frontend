@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 import './nav.css';
 import HomeImg from "./img/home.png";
 import SearchImg from "./img/loupe.png";
+import LeafImg from "./img/leaf.png";
+import UserImg from "./img/user.png";
 
 function nav(){
     return (
@@ -10,22 +12,26 @@ function nav(){
             <div className="nav-child">
                 <Link className="nav-link" to="/map_main">
                     <img src={HomeImg} alt="Home" id="PageIcon"></img>
-                    HOME
-
+                    <p>HOME</p>
                 </Link>
             </div>
             <div className="nav-child">
                 <Link className="nav-link" to="/query">
                     <img src={SearchImg} alt="Search" id="PageIcon"></img>
-                    SEARCH
-                    
+                    <p>SEARCH</p>
                 </Link>
             </div>
             <div className="nav-child">
-                <Link className="nav-link" to="/notice">ECO-NOTICE</Link>
+                <Link className="nav-link" to="/notice">
+                    <img src={LeafImg} alt="Leaf" id="PageIcon"></img>
+                    <p>ECO-NOTICE</p>
+                </Link>
             </div>
             <div className="nav-child">
-                <Link className="nav-link" to="/mypage">MYPAGE</Link>
+                <Link className="nav-link" to="/mypage">
+                    <img src={UserImg} alt="User" id="PageIcon"></img>
+                    <p>MYPAGE</p>
+                </Link>
             </div>
         </div>
     );
