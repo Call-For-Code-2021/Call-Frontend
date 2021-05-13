@@ -1,19 +1,22 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import './nav.css';
+import HomeImg from "./img/home.png";
+import SearchImg from "./img/loupe.png";
 
 function nav(){
     return (
         <div className="nav-container">
             <div className="nav-child">
                 <Link className="nav-link" to="/map_main">
-                    <div id="img1"></div>
+                    <img src={HomeImg} alt="Home" id="PageIcon"></img>
                     HOME
+
                 </Link>
             </div>
             <div className="nav-child">
                 <Link className="nav-link" to="/query">
-                    <img src="./img/home.png" alt="search"></img>
+                    <img src={SearchImg} alt="Search" id="PageIcon"></img>
                     SEARCH
                     
                 </Link>
