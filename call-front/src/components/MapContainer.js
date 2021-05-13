@@ -141,10 +141,6 @@ const MapContainer = ({ searchPlace }) => {
     <div>
       <div
         id="map"
-        style={{
-          width: '800px',
-          height: '800px',
-        }}
       ></div>
       <div id="result-list">
         {Places.map((item, i) => (
