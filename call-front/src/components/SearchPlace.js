@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import MapContainer from "./MapContainer";
 import "./SearchPlace.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SearchPlace = () => {
   const [inputText, setInputText] = useState("");
