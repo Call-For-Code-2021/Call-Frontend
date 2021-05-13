@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState} from 'react'
 
 import './MapContainer.css';
 
@@ -11,12 +11,30 @@ const MapContainer = ({ searchPlace }) => {
   
   useEffect(() => {
     var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 })
-    const container = document.getElementById('myMap')
-    const options = {
-      center: new kakao.maps.LatLng(37.57813143829081, 126.9773018596565),
+    const mapContainer = document.getElementById('map')
+    const mapOption = {
+      center: new kakao.maps.LatLng(37.57813143829081, 126.9773018596565), //지도의 중심좌표
       level: 4,
     }
-    const map = new kakao.maps.Map(container, options)
+    const map = new kakao.maps.Map(mapContainer, mapOption)  // 지도 생성 및 객체 리턴
+    
+    if (navigator.geolocation){
+
+      navigator.geolocation.getCurrentPosition(function(position){
+          let lat = position.coords.latitude,
+              lon = position.coords.longitude;
+
+          let locPosition = new kakao.maps.LatLng(lat, lon),
+              message = '<div style="padding:5px;">현위치</div>';
+
+          // 마커와 인퍼윈도우를 표시
+          displayMarker(locPosition, message);
+      });
+    } else{
+        let locPosition = new kakao.maps.LatLng(37.5677463677699,126.9153946742084),
+          message = 'geolocation을 사용할 수 없어요..'
+        displayMarker(locPosition,message);
+    }
 
     const ps = new kakao.maps.services.Places()
 
@@ -28,7 +46,7 @@ const MapContainer = ({ searchPlace }) => {
     
 
             for (let i = 0; i < data.length; i++) {
-                displayMarker(data[i])
+                displayMarker1(data[i])
                 bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x))
             }
 
@@ -49,6 +67,7 @@ const MapContainer = ({ searchPlace }) => {
         }
         
     }
+    
 
     // 검색결과 목록 하단에 페이지 번호 표시
     function displayPagination(pagination) {
@@ -80,8 +99,30 @@ const MapContainer = ({ searchPlace }) => {
       }
       paginationEl.appendChild(fragment)
     }
+    
+    // 지도에 마커와 인포윈도우를 표시
+    function displayMarker(locPosition, message) {
 
-    function displayMarker(place) {
+      // 마커를 생성
+      let marker1 = new kakao.maps.Marker({
+          map: map,
+          position: locPosition
+      });
+
+      let iwContent = message,
+          iwRemoveable = true;
+      
+      var infowindow = new kakao.maps.InfoWindow({
+          content: iwContent,
+          removable: iwRemoveable
+      });
+
+      infowindow.open(map,marker1);
+
+      map.setCenter(locPosition);
+    }
+
+    function displayMarker1(place) {
       let marker = new kakao.maps.Marker({
         map: map,
         position: new kakao.maps.LatLng(place.y, place.x),
@@ -92,12 +133,14 @@ const MapContainer = ({ searchPlace }) => {
         infowindow.open(map, marker)
       })
     }
+    
   }, [searchPlace])
+  
 
   return (
     <div>
       <div
-        id="myMap"
+        id="map"
         style={{
           width: '800px',
           height: '800px',
