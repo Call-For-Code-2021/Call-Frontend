@@ -26,12 +26,12 @@ const SearchPlace = () => {
           <input
               className="form-control me-2"
               type="search"
-              placeholder="Search Place..."
+              placeholder="장소를 검색하세요. Search for a place."
               aria-label="Search"
               onChange={onChange}
               value={inputText}
           />
-          <button className="btn btn-outline-success" type="submit">검색</button>
+          <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
       <MapContainer searchPlace={place} />

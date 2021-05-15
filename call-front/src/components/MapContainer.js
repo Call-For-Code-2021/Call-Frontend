@@ -32,7 +32,7 @@ const MapContainer = ({ searchPlace }) => {
       });
     } else{
         let locPosition = new kakao.maps.LatLng(37.5677463677699,126.9153946742084),
-          message = 'geolocation을 사용할 수 없어요..'
+          message = '위치 정보 사용이 불가능합니다. Location information is not available.'
         displayMarker(locPosition,message);
     }
 
@@ -57,12 +57,12 @@ const MapContainer = ({ searchPlace }) => {
         }
       
         else if (status === kakao.maps.services.Status.ZERO_RESULT) {
-            alert('검색 결과가 존재하지 않습니다.');
+            alert('검색 결과가 존재하지 않습니다. Search results do not exist.');
             return;
         } 
 
         else if (status === kakao.maps.services.Status.ERROR) {
-            alert('검색 결과 중 오류가 발생했습니다.');
+            alert('검색 중 오류가 발생했습니다. An error occurred while searching.');
             return;
         }
         
