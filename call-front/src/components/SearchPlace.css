@@ -6,14 +6,15 @@
 
 .inputForm {
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
 }
 
 .inputForm > input {
-    width: 60%;
-    height: 30px;
+    width: 80%;
+    height: 40px;
 }
 
 .btn {
     width: 20%;
+    height: 40px;
 }
