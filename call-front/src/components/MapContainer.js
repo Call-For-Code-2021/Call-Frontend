@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react'
 
 import './MapContainer.css';
+import styled from "styled-components";
 
 const { kakao } = window
 
