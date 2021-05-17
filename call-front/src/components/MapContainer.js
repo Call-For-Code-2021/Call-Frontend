@@ -15,7 +15,7 @@ const MapContainer = ({ searchPlace }) => {
     const mapContainer = document.getElementById('map')
     const mapOption = {
       center: new kakao.maps.LatLng(37.57813143829081, 126.9773018596565), //지도의 중심좌표
-      level: 4,
+      level: 5,
     }
     const map = new kakao.maps.Map(mapContainer, mapOption)  // 지도 생성 및 객체 리턴
     
@@ -33,7 +33,7 @@ const MapContainer = ({ searchPlace }) => {
       });
     } else{
         let locPosition = new kakao.maps.LatLng(37.5677463677699,126.9153946742084),
-          message = '위치 정보 사용이 불가능합니다. Location information is not available.'
+          message = '위치 정보 사용이 불가능합니다.\nLocation information is not available.'
         displayMarker(locPosition,message);
     }
 
@@ -58,12 +58,12 @@ const MapContainer = ({ searchPlace }) => {
         }
       
         else if (status === kakao.maps.services.Status.ZERO_RESULT) {
-            alert('검색 결과가 존재하지 않습니다. Search results do not exist.');
+            alert('검색 결과가 존재하지 않습니다.\nSearch results do not exist.');
             return;
         } 
 
         else if (status === kakao.maps.services.Status.ERROR) {
-            alert('검색 중 오류가 발생했습니다. An error occurred while searching.');
+            alert('검색 중 오류가 발생했습니다.\nAn error occurred while searching.');
             return;
         }
         
