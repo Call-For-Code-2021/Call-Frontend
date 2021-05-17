@@ -25,7 +25,7 @@ const MapContainer = ({ searchPlace }) => {
               lon = position.coords.longitude;
 
           let locPosition = new kakao.maps.LatLng(lat, lon),
-              message = '<div>현위치\nCurrent Location</div>';
+              message = '<div style="padding:5px;">현위치</div>';
 
           // 마커와 인퍼윈도우를 표시
           displayMarker(locPosition, message);
