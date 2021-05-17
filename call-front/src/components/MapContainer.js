@@ -139,10 +139,10 @@ const MapContainer = ({ searchPlace }) => {
   
 
   return (
-    <div>
-      <div
-        id="map"
-      ></div>
+    <>
+      <Maps id="map">
+
+      </Maps>
       <div id="result-list">
         {Places.map((item, i) => (
           <div key={i} style={{ marginTop: '20px'}}>
@@ -163,8 +163,12 @@ const MapContainer = ({ searchPlace }) => {
         ))}
         <div id="pagination"></div>
       </div>
-    </div>
+    </>
   )
 }
+const Maps = styled.div`
+width: 100%;
+height: 800PX;
+`;
 
 export default MapContainer
