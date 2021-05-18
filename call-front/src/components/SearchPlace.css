@@ -1,7 +1,7 @@
 .inputForm-con {
-    margin: 10px 0;
+    margin: 10px 0 -8px 0;
     width: 100%;
-    height: auto;
+    height: 5vh;
 }
 
 .inputForm {
@@ -11,10 +11,10 @@
 
 .inputForm > input {
     width: 80%;
-    height: 40px;
+    height: 3vh;
 }
 
 .btn {
     width: 20%;
-    height: 40px;
+    height: 3vh;
 }
