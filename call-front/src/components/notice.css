@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "Malgun-gothic";
+    font-weight: normal;
+    src: url("fonts/malgun.ttf") format("truetype");
+}
+
+.notice {
+    margin: 0 auto;
+    width: 80vh;
+    height: 100%;
+
+    background-color: #282c34;
+}
+
+h3 {
+    padding: 10px 0;
+    text-align: center;
+    font-family: "Malgun-gothic";
+    font-weight: bold;
+}
+
+h3 > span {
+    color: #8DB72A;
+}
+
+article {
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+
+    background-color: #61dafb;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
