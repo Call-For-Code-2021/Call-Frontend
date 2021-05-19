@@ -1,4 +1,5 @@
 import React from 'react';
+import './notice.css';
 
 function notice(){
     return (
