@@ -18,7 +18,7 @@ function query(){
                         placeholder="식당이나 카페의 이름 또는 주소를 검색하세요."
                         aria-label="Search"
                     />
-                    <button className="btn btn-outline-success" type="submit">Search</button>
+                    <button className="bani btn-outline-success" type="submit">Search</button>
                 </form>
                 <div className="article_header">
                     <h4>최근 검색어</h4>
