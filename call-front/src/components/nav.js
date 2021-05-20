@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+
 import './nav.css';
+
 import HomeImg from "./img/home.png";
 import SearchImg from "./img/loupe.png";
 import LeafImg from "./img/leaf.png";
