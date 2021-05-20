@@ -11,6 +11,7 @@ import UserImg from "./img/user.png";
 function nav(){
     return (
         <div className="nav-section">
+            <hr/>
             <div className="nav-container">
                 <div className="nav-child">
                     <Link className="nav-link" to="/map_main">
