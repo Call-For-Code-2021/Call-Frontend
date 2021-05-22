@@ -21,15 +21,17 @@ const SearchPlace = () => {
 
   return (
     <>
-      <div className="inputForm-con">
+      <div className="inputForm-con" id="searchP">
         <form className="inputForm d-flex" onSubmit={handleSubmit}>
           <input
               className="form-control me-2"
+              id="searchIn"
               type="search"
               placeholder="장소를 검색하세요. Search for a place."
               aria-label="Search"
               onChange={onChange}
               value={inputText}
+              
           />
           <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
