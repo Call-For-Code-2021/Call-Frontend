@@ -130,7 +130,7 @@ const MapContainer = ({ searchPlace }) => {
       })
 
       kakao.maps.event.addListener(marker, 'click', function () {
-        infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>')
+        infowindow.setContent('<div id="CSPing">' + place.place_name + '</div>')
         infowindow.open(map, marker)
       })
     }
@@ -168,7 +168,7 @@ const MapContainer = ({ searchPlace }) => {
 }
 const Maps = styled.div`
 width: auto;
-height: 89vh;
+height: 90vh;
 `;
 
 export default MapContainer
