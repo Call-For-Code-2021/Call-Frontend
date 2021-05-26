@@ -1,6 +1,15 @@
 #searchP {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    background-color: white;
     margin-top:-1vh;
 }
-#searchIn{
+#searchIn, #searchbtn {
+
     height:3vh;
+}
+
+#inputForm {
+    padding-top: 1vh;
 }
