@@ -10,6 +10,10 @@
     height:3vh;
 }
 
+#searchbtn {
+    line-height:0;
+}
+
 #inputForm {
     padding-top: 1vh;
 }
