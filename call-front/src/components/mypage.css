@@ -1,16 +1,120 @@
-h1{
-    text-align: center;
-}
-#profile{
-    width: 80%;
-    height: 13vh;
-    margin: 5vh auto;
-    border: 1px solid black;
-}
-#proText{
-    border: 1px solid black;
-    width: 60px;
-    height: 70px;
-    background-color: black;
+
+#query_section { margin: 2%; padding-bottom: 5%; }
+
+.div_my { text-align: center; }
+
+.leaf { margin: 1%;
+        width: 6%; }
+
+.n_name { font-weight: bold; }
+
+.news { padding: 2% 0;
+        background-color: #BFBFBF;}
+
+.read_news { padding: 2% 0; }
+
+/* 해상도 1024px ~ */
+@media all and (min-width:1024px) {
+    #title { color: #8DB72A; }
     
+    .profile { margin: 0 auto; width: 28%; height: 10vh; }
+
+    #user { width: 20%;
+            float: left; }
+
+    #edit { width: 8%;
+            float: right; }
+
+    .a { padding: 2%;
+        color: #000;
+        text-decoration: none; }
+
+    #UserName { color: #8DB72A; }
+
+    .UserInfo { padding-top: 5%;
+                font-weight: bold;
+                font-size: 20px; }
+    
+    .st { margin: 5% 0 2%; }
+}
+
+/* 해상도 768px ~ 1023px */
+@media all and (min-width:768px) and (max-width:1023px) {
+    #title { color: #8DB72A; }
+    
+    .profile { margin: 0 auto; width: 35%; height: 10vh; }
+
+    #user { width: 16%;
+            float: left; }
+
+    #edit { width: 7%;
+            float: right; }
+
+    .a { padding: 2%;
+        color: #000;
+        text-decoration: none;
+        font-size: 14px;}
+
+    #UserName { color: #8DB72A; }
+
+    .UserInfo { padding-top: 5%;
+                font-weight: bold;
+                font-size: 18px; }
+    
+    .st { margin: 5% 0 2%;
+        font-size: 14px; }
+}
+
+/* 해상도 480px ~ 767px */
+@media all and (min-width:480px) and (max-width:767px) {
+    #title { color: #8DB72A; }
+    
+    .profile { margin: 0 auto; width: 45%; height: 10vh; }
+
+    #user { width: 15%;
+            float: left; }
+
+    #edit { width: 6%;
+            float: right; }
+
+    .a { padding: 2%;
+        color: #000;
+        text-decoration: none;
+        font-size: 13px;}
+
+    #UserName { color: #8DB72A; }
+
+    .UserInfo { padding-top: 5%;
+                font-weight: bold;
+                font-size: 16px; }
+    
+    .st { margin: 5% 0 2%;
+        font-size: 13px; }
+}
+
+/* 해상도 ~ 479px */
+@media all and (max-width:479px) {
+    #title { color: #8DB72A; }
+    
+    .profile { margin: 0 auto; width: 55%; height: 10vh; }
+
+    #user { width: 15%;
+            float: left; }
+
+    #edit { width: 6%;
+            float: right; }
+
+    .a { padding: 2%;
+        color: #000;
+        text-decoration: none;
+        font-size: 12px;}
+
+    #UserName { color: #8DB72A; }
+
+    .UserInfo { padding-top: 5%;
+                font-weight: bold;
+                font-size: 16px; }
+    
+    .st { margin: 5% 0 2%;
+        font-size: 12px; }
 }
