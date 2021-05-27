@@ -6,7 +6,6 @@
 
 .query {
     margin: 0 auto;
-    width: 80vh;
 }
 
 .query > h3 {
@@ -66,7 +65,7 @@
 }
 
 .article_body_con > p {
-    width: 300px;
+    width: 120px;
     float: left;
     color : #BFBFBF;
 }
