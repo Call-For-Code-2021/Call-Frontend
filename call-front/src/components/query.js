@@ -40,7 +40,6 @@ function query(){
 }
 
 const QueryArea = styled.div`
-width: auto;
 height: 94vh;
 `;
 

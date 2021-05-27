@@ -169,7 +169,7 @@ const MapContainer = ({ searchPlace }) => {
 
 const Maps = styled.div`
 width: auto;
-height: 90vh;
+height: 93vh;
 `;
 
 export default MapContainer
