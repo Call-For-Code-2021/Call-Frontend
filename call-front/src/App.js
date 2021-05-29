@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from "styled-components";
 
 // 페이지 내부
 import Nav from './components/nav';
@@ -31,6 +32,6 @@ const App = () => {
             <Nav/>
         </>
     );
-};
+}
 
 export default App;
