@@ -35,7 +35,6 @@ function Users() {
     if (error) return <div>에러가 발생했습니다</div>;
     if (!users) return null;
     return (
-      <ul>
           <div className="query_section">
             
             <div class="div_my">
@@ -49,7 +48,7 @@ function Users() {
                         <img src={UserImg} alt="User" id="user"/>
                         <span class="UserInfo"><span id="UserName">{users.map(user => (<div key={user.id}>{user.username}</div>))}</span>&nbsp;님</span>
                         <br></br>
-                        <a href="#" class="a">총 스크랩 횟수 : 5번</a>
+                        <a href="#" class="scrap_p">총 스크랩 횟수 : 5번</a>
                         <a href="#"><img src={EditImg} alt="Edit" id="edit"/></a>
                     </div> 
                     
@@ -79,8 +78,6 @@ function Users() {
 
             </div>
         </div>
-        
-      </ul>
     );
   }
 
