@@ -60,7 +60,6 @@ function Users() {
                     <img src={LeafImg} alt="Leaf" class="leaf"/>
                     <img src={LeafImg} alt="Leaf" class="leaf"/>
                     <p class="st">새 소식</p>
-
                     <div class="news">
                         <span class="n_name">환경뉴스</span> 님의 새로운 기사가 있어요.
                     </div>
@@ -76,6 +75,5 @@ function Users() {
         </div>
     );
 }
-
 
 export default Users;
