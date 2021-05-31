@@ -22,7 +22,7 @@ const SearchPlace = () => {
   return (
     <>
       <div className="inputForm-con" id="searchP">
-        <form className="inputForm d-flex" id="inputForm" onSubmit={handleSubmit}>
+        <form className="inputForm d-flex" onSubmit={handleSubmit}>
           <input
               className="form-control me-2"
               id="searchIn"
@@ -33,7 +33,7 @@ const SearchPlace = () => {
               value={inputText}
               
           />
-          <button className="btn btn-outline-success" id="searchbtn" type="submit">Search</button>
+          <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
       <MapContainer searchPlace={place} />

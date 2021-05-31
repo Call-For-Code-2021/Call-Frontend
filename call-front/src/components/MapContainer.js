@@ -166,7 +166,6 @@ const MapContainer = ({ searchPlace }) => {
     </>
   )
 }
-
 const Maps = styled.div`
 width: auto;
 height: 93vh;
