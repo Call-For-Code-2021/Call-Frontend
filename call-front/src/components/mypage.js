@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 import "./mypage.css";
 
@@ -8,34 +8,34 @@ import UserImg from "./img/user.png";
 import EditImg from "./img/edit.png";
 
 function Users() {
-    const [users, setUsers] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+    // const [users, setUsers] = useState(null);
+    // const [loading, setLoading] = useState(false);
+    // const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const fetchUsers = async () => {
-            try {
-                // 요청이 시작 할 때 error 와 users 를 초기화
-                setError(null);
-                setUsers(null);
-                // loading 상태를 true 로
-                setLoading(true);
-                const response = await axios.get(
-                'https://jsonplaceholder.typicode.com/users'
-                );
-                setUsers(response.data); // 데이터는 response.data 안에.
-            } catch (e) {
-                setError(e);
-            }
-            setLoading(false);
-        };
+    // useEffect(() => {
+    //     const fetchUsers = async () => {
+    //         try {
+    //             // 요청이 시작 할 때 error 와 users 를 초기화
+    //             setError(null);
+    //             setUsers(null);
+    //             // loading 상태를 true 로
+    //             setLoading(true);
+    //             const response = await axios.get(
+    //             'https://jsonplaceholder.typicode.com/users'
+    //             );
+    //             setUsers(response.data); // 데이터는 response.data 안에.
+    //         } catch (e) {
+    //             setError(e);
+    //         }
+    //         setLoading(false);
+    //     };
 
-        fetchUsers();
-    }, []);
+    //     fetchUsers();
+    // }, []);
 
-    if (loading) return <div>로딩중..</div>;
-    if (error) return <div>에러가 발생했습니다</div>;
-    if (!users) return null;
+    // if (loading) return <div>로딩중..</div>;
+    // if (error) return <div>에러가 발생했습니다</div>;
+    // if (!users) return null;
     return (
         <div className="query_section">
             <div class="div_my">
@@ -47,7 +47,7 @@ function Users() {
                         <img src={UserImg} alt="User" id="user"/>
                         <span class="UserInfo">
                             <span id="UserName">
-                                {users.map(user => (<div key={user.id}>{user.username}</div>))}
+                                이한나{/* {users.map(user => (<div key={user.id}>{user.username}</div>))} */}
                             </span>&nbsp;님
                         </span>
                         <br></br>
