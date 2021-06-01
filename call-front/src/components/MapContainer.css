@@ -4,3 +4,9 @@
     font-size:12px;
     text-align:center;
 }
+
+.place-name {
+    width: 100px;
+    height: 100px;
+    background-color: #25cff2;
+} 

@@ -1,14 +1,15 @@
 #searchP {
     width: 100%;
-    height: 4.3vh;
+    height: 5.2vh;
     position: fixed;
+    top: 0;
     z-index: 4;
     background-color: white;
+    margin-top:-1vh;
 }
 #searchIn, #searchbtn {
-    height: 3vh;
+    height:3vh;
 }
-
 #searchbtn {
     line-height:0;
 }
@@ -18,6 +19,7 @@
 }
 
 #inputForm {
-    margin: 0.7vh auto;
     width: 80%;
+    margin: 0.7vh auto;
+    padding-top: 1vh;
 }

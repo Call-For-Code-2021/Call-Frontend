@@ -100,7 +100,7 @@ const MapContainer = ({ searchPlace }) => {
       }
       paginationEl.appendChild(fragment)
     }
-    
+
     // 지도에 마커와 인포윈도우를 표시
     function displayMarker(locPosition, message) {
 
@@ -130,13 +130,11 @@ const MapContainer = ({ searchPlace }) => {
       })
 
       kakao.maps.event.addListener(marker, 'click', function () {
-        infowindow.setContent('<div id="CSPing">' + place.place_name + '</div>')
-        infowindow.open(map, marker)
+          infowindow.setContent('<div id="CSPing">' + '<div className="place-name">' + place.place_name + '</div>' + '</div>')
+          infowindow.open(map, marker)
       })
     }
-    
   }, [searchPlace])
-  
 
   return (
     <>

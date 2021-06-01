@@ -19,6 +19,8 @@ import { Route, Switch } from 'react-router-dom';
 const App = () => {
     return (
         <>
+            <meta name="apple-mobile-web-app-capable" content="yes"></meta>
+            <meta name="mobile-web-app-capable" content="yes"></meta>
             <div className="content">
                 <Switch>
                     <Route exact path="/" component={Home} />
