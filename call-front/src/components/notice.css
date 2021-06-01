@@ -34,6 +34,7 @@ article {
     float: left;
     width: 5vw;
     height: 5vw;
+    line-height: 5vw;
 }
 
 .article_header > h4 {
