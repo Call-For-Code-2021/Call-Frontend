@@ -1,16 +1,15 @@
 import React from 'react';
-import styled from "styled-components";
 
 // 페이지 내부
 import Nav from './components/nav';
 
 // Section 내부에 라우팅할 페이지
-import Home from './components/landing';
-import Login_main from './components/login_main';
-import Map_main from './components/SearchPlace';
-import Query from './components/query';
-import Notice from './components/notice';
-import MyPage from './components/mypage';
+import Home from './components/landing.js';
+import Login_main from './components/login_main.js';
+import Map_main from './components/SearchPlace.js';
+import Query from './components/Query.js';
+import Notice from './components/notice.js';
+import MyPage from './components/mypage.js';
 
 
 // Redirect 컴포넌트 import

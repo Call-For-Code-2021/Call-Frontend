@@ -1,9 +1,9 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState} from 'react';
 
 import './MapContainer.css';
 import styled from "styled-components";
 
-const { kakao } = window
+const { kakao } = window;
 
 const MapContainer = ({ searchPlace }) => {
 
@@ -162,7 +162,7 @@ const MapContainer = ({ searchPlace }) => {
         <div id="pagination"></div>
       </div>
     </>
-  )
+  );
 }
 
 const Maps = styled.div`

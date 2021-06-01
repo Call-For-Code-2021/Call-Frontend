@@ -6,14 +6,14 @@ import "./query.css";
 
 import XImg from "./img/free-icon-letter-x-109602.png";
 
-const { kakao } = window
+const { kakao } = window;
 
-const query = ({ searchPlace }) => {
+const Query = ({ searchPlace }) => {
 
+    // 검색결과 배열에 담아줌
     const [Places, setPlaces] = useState([])
 
     useEffect(() => {
-        var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 })
         const mapContainer = document.getElementById('map')
         const mapOption = {
             center: new kakao.maps.LatLng(37.57813143829081, 126.9773018596565), //지도의 중심좌표
@@ -23,11 +23,16 @@ const query = ({ searchPlace }) => {
 
         const ps = new kakao.maps.services.Places()
 
-        ps.keywordSearch(placesSearchCB)
+        ps.keywordSearch(searchPlace, placesSearchCB)
 
         function placesSearchCB(data, status, pagination) {
             if (status === kakao.maps.services.Status.OK) {
                 let bounds = new kakao.maps.LatLngBounds()
+
+
+                for (let i = 0; i < data.length; i++) {
+                    bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x))
+                }
 
                 map.setBounds(bounds)
                 // 페이지 목록 보여주는 displayPagination() 추가
@@ -78,6 +83,7 @@ const query = ({ searchPlace }) => {
             }
             paginationEl.appendChild(fragment)
         }
+
     }, [searchPlace])
 
     return (
@@ -136,6 +142,6 @@ const query = ({ searchPlace }) => {
 
 const QueryArea = styled.div`
   height: 94vh;
-`
+`;
 
-export default query;
+export default Query;
