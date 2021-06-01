@@ -16,10 +16,12 @@
     text-align: center;
     font-family: "Malgun-gothic";
     font-weight: bold;
+    font-size: 1.3em;
 }
 
 h3 > span {
     color: #8DB72A;
+    font-size: 1.4em;
 }
 
 article {
@@ -30,14 +32,15 @@ article {
 
 .article_header > img {
     float: left;
-    width: 50px;
-    height: 50px;
+    width: 5vw;
+    height: 5vw;
 }
 
 .article_header > h4 {
     padding-left: 30px;
     float: left;
-    line-height: 40px;
+    line-height: 5vw;
+    font-size: 1.2em;
 }
 
 .article_header > h4 > span {
@@ -48,8 +51,10 @@ article {
     clear: both;
     font-weight: bold;
     padding-top: 10px;
+    font-size: 1.2em;
 }
 
 .article_body > p {
     padding: 5px 0;
+    font-size: 1em;
 }
