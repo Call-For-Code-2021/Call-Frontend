@@ -47,7 +47,7 @@ function Users() {
                         <img src={UserImg} alt="User" id="user"/>
                         <span class="UserInfo">
                             <span id="UserName">
-                                {users.map(user => (<div key={user.id}>{user.username}</div>))}
+                                {users.map(user => (<div>{user.username}</div>))}
                             </span>&nbsp;님
                         </span>
                         <br></br>
