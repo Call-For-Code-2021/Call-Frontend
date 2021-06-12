@@ -51,8 +51,8 @@ function Users() {
                             </span>&nbsp;님
                         </span>
                         <br></br>
-                        <a href="#" class="scrap_p">총 스크랩 횟수 : 5번</a>
-                        <a href="#"><img src={EditImg} alt="Edit" id="edit"/></a>
+                        <a href="/map_main" class="scrap_p">총 스크랩 횟수 : 5번</a>
+                        <a href="/map_main"><img src={EditImg} alt="Edit" id="edit"/></a>
                     </div>
                     <br></br>
                     <p class="st">이한나 님의 주문으로 절약된 나무</p>
