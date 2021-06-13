@@ -10,6 +10,7 @@ import Map_main from './components/SearchPlace';
 import Query from './components/query';
 import Notice from './components/notice';
 import MyPage from './components/mypage';
+import Register from './components/Register';
 
 
 // Redirect 컴포넌트 import
@@ -28,6 +29,7 @@ const App = () => {
                     <Route path="/query" component={Query} />
                     <Route path="/notice" component={Notice} />
                     <Route path="/mypage" component={MyPage} />
+                    <Route path="/register" component={Register} />
                 </Switch>
             </div>
             <Nav/>
