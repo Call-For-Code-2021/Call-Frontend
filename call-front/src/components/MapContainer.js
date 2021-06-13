@@ -42,7 +42,7 @@ const MapContainer = ({ searchPlace }) => {
     ps.keywordSearch(searchPlace, placesSearchCB)
 
     function placesSearchCB(data, status, pagination) {
-        if (status === kakao.maps.services.Status.OK) {
+        if  (status === kakao.maps.services.Status.OK) {
             let bounds = new kakao.maps.LatLngBounds()
     
 
