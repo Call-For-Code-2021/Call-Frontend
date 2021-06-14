@@ -1,12 +1,11 @@
 #CSPing{
-    padding:0px;
-    margin:0px;
+    padding:0;
+    margin:20px;
     font-size:12px;
     text-align:center;
 }
-
-.place-name {
-    width: 100px;
-    height: 100px;
-    background-color: #25cff2;
-} 
+#pl_name{
+    padding:0;
+    margin:0 auto;
+    color: rgb(20, 128, 35);
+}
