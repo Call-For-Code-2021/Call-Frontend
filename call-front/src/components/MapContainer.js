@@ -96,7 +96,7 @@ const MapContainer = ({ searchPlace }) => {
       })
 
       kakao.maps.event.addListener(marker, 'click', function () {
-          infowindow.setContent('<div id="CSPing">' + '<div className="place-name">' + place.place_name + '</div>' + '</div>')
+          infowindow.setContent('<div id="CSPing">' + '<span id="pl_name">' + place.place_name + '</span>' + '</div>')
           infowindow.open(map, marker)
       })
     }
