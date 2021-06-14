@@ -7,7 +7,8 @@
     color: black;
     z-index: 1;
     background-color: white;
-    padding-bottom: 6vh;
+    padding-bottom: 11%;
+    border-top: 4px solid rgb(68, 138, 64);
 }
 
 .nav-container {
