@@ -26,11 +26,11 @@
 .on{
     padding: 10px;
     font-size: 27px;
-    color: rgb(101, 184, 93);
+    color: rgb(124, 223, 115);
     font-weight: bold;
 }
 .page-count:hover, .on:hover{
-    color: rgb(101, 184, 93);
+    color: rgb(124, 223, 115);
 }
 #call{
     padding: 0;

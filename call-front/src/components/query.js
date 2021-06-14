@@ -76,7 +76,9 @@ const MapContainer = ({ searchPlace }) => {
           <div key={i} style={{ marginTop: '4vh'}}>
             
               <div>
+              <hr></hr>
                <h5 id="place_name"><span id="place_count">{i + 1}  </span>{item.place_name}</h5>
+               
                {item.road_address_name ? (
                  <div>
                    <img src={Ping} id="ping"></img>
