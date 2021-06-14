@@ -11,7 +11,7 @@ import Query from './components/QuSearchPlace';
 import Notice from './components/notice';
 import MyPage from './components/mypage';
 import Register from './components/Register';
-
+import Admin from './components/Admin';
 
 // Redirect 컴포넌트 import
 import { Route, Switch } from 'react-router-dom';
@@ -30,6 +30,7 @@ const App = () => {
                     <Route path="/notice" component={Notice} />
                     <Route path="/mypage" component={MyPage} />
                     <Route path="/register" component={Register} />
+                    <Route path="/admin" component={Admin} />
                 </Switch>
             </div>
             <Nav/>
