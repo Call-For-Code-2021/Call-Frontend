@@ -1,5 +1,7 @@
 import React from 'react';
 // import axios from 'axios';
+import Cookies from "universal-cookie";
+import {Link} from "react-router-dom";
 
 import "./mypage.css";
 
@@ -8,6 +10,12 @@ import UserImg from "./img/user.png";
 import EditImg from "./img/edit.png";
 
 function Users() {
+
+    const cookies = new Cookies();
+
+    const handleclicklogout = () => {
+        cookies.remove('UTG', {path: '/'});
+    }
     // const [users, setUsers] = useState(null);
     // const [loading, setLoading] = useState(false);
     // const [error, setError] = useState(null);
@@ -41,6 +49,9 @@ function Users() {
             <div class="div_my">
                 <header>
                     <h3>my페이지</h3>
+                    <Link className="nav-link" to="/login">
+                        <button onClick={handleclicklogout}>Logout</button>
+                    </Link>
                 </header>
                 <section>
                     <div class="profile">
