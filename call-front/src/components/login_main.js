@@ -38,6 +38,7 @@ function Login(){
                 console.log(response.data);
                 cookies.set('UTG', response.data['jwt_token'], {path: '/'});
                 console.log(cookies.get('UTG'));
+                alert(userid + "님 로그인되었습니다.");
             }).catch((error) => {
             console.log(error);
             if(error === 400){
