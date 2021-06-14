@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react'
 
 import './query.css';
+import Call from './img/call.png';
 
 const { kakao } = window
 
@@ -74,7 +75,7 @@ const MapContainer = ({ searchPlace }) => {
           <div key={i} style={{ marginTop: '4vh'}}>
             
             <div>
-              <h5 id="place_name"><span>{i + 1}   </span>{item.place_name}</h5>
+              <h5 id="place_name"><span id="place_count">{i + 1}  </span>{item.place_name}</h5>
               {item.road_address_name ? (
                 <div>
                   <span>{item.road_address_name}</span>
@@ -83,7 +84,7 @@ const MapContainer = ({ searchPlace }) => {
               ) : (
                 <span>{item.address_name}</span>
               )}
-              <span>{item.phone}</span>
+              <span><img src={Call} id="call"></img>{item.phone}</span>
             </div>
           </div>
         ))}

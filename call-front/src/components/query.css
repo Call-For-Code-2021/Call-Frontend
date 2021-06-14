@@ -1,3 +1,7 @@
+#place_count{
+    font-size: 30px;
+    color: rgb(67, 114, 63);
+}
 #result-list{
     margin: 0 auto;
     margin-left: 10vw;
@@ -9,6 +13,7 @@
 }
 #place_name{
     font-weight: bold;
+    color: rgb(116, 214, 107);
 }
 .page-count, .on{
     margin: 0 auto;
@@ -26,4 +31,9 @@
 }
 .page-count:hover, .on:hover{
     color: rgb(101, 184, 93);
+}
+#call{
+    width:13px;
+    height:13px;
+    margin-right:2vw;
 }
