@@ -1,44 +1,98 @@
-import React from 'react';
-import styled from "styled-components";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useEffect, useState} from 'react'
 
-import "./query.css";
+import './query.css';
 
-import XImg from "./img/free-icon-letter-x-109602.png";
+const { kakao } = window
 
-function query() {
-    return (
-        <QueryArea>
-            <div className="query">
-                <h3>서울 종로구 대학로</h3>
-                <form action="" className="inputForm d-flex">
-                    <input type="search"
-                        className="form-control"
-                        placeholder="식당이나 카페의 이름 또는 주소를 검색하세요."
-                        aria-label="Search"
-                    />
-                    <button className="bani btn-outline-success" type="submit">검색</button>
-                </form>
-                <div className="article_header">
-                    <h4>최근 검색어</h4>
+const MapContainer = ({ searchPlace }) => {
+
+  // 검색결과 배열에 담아줌
+  const [Places, setPlaces] = useState([])
+  
+   useEffect(() => {
+  
+    const ps = new kakao.maps.services.Places()
+
+    ps.keywordSearch(searchPlace, placesSearchCB)
+
+    function placesSearchCB(data, status, pagination) {
+        if (status === kakao.maps.services.Status.OK) {
+            displayPagination(pagination)
+            setPlaces(data)
+        }
+      
+        else if (status === kakao.maps.services.Status.ZERO_RESULT) {
+            alert('검색 결과가 존재하지 않습니다.\nSearch results do not exist.');
+            return;
+        } 
+
+        else if (status === kakao.maps.services.Status.ERROR) {
+            alert('검색 중 오류가 발생했습니다.\nAn error occurred while searching.');
+            return;
+        }
+        
+    }
+    
+    // 검색결과 목록 하단에 페이지 번호 표시
+    function displayPagination(pagination) {
+      var paginationEl = document.getElementById('pagination'),
+        fragment = document.createDocumentFragment(),
+        i
+
+      // 기존에 추가된 페이지 번호 삭제
+      while (paginationEl.hasChildNodes()) {
+        paginationEl.removeChild(paginationEl.lastChild)
+      }
+
+      for (i = 1; i <= pagination.last; i++) {
+        var el = document.createElement('a')
+        el.href = '#'
+        el.innerHTML = i
+        el.className = "page-count"
+
+        if (i === pagination.current) {
+          el.className = 'on'
+        } else {
+          el.onclick = (function (i) {
+            return function () {
+              pagination.gotoPage(i)
+            }
+          })(i)
+        }
+
+        fragment.appendChild(el)
+      }
+      paginationEl.appendChild(fragment)
+    }
+  }, [searchPlace])
+
+  return (
+    <>
+      <div style={{marginTop: '10vh'}}></div>
+      <div id="result-list">
+        {Places.map((item, i) => (
+          <div key={i} style={{ marginTop: '4vh'}}>
+            
+            <div>
+              <h5 id="place_name"><span>{i + 1}   </span>{item.place_name}</h5>
+              {item.road_address_name ? (
+                <div>
+                  <span>{item.road_address_name}</span>
+                  <span>{item.address_name}</span>
                 </div>
-                <div className="article_body">
-                    <div className="article_body_con">
-                        <p>서울 종로구 대학로</p>
-                        <img src={XImg} alt="X_btn"/>
-                    </div>
-                    <div className="article_body_con">
-                        <p>서울 종로구 대학로</p>
-                        <img src={XImg} alt="X_btn"/>
-                    </div>
-                </div>
+              ) : (
+                <span>{item.address_name}</span>
+              )}
+              <span>{item.phone}</span>
             </div>
-        </QueryArea>
-    );
+          </div>
+        ))}
+        <div id="pagination"></div>
+      </div>
+      <div style={{marginBottom: '12vh'}}></div>
+    </>
+  )
 }
 
-const QueryArea = styled.div`
-  height: 94vh;
-`
 
-export default query;
+export default MapContainer

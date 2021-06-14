@@ -7,7 +7,7 @@ import Nav from './components/nav';
 import Home from './components/landing';
 import Login_main from './components/login_main';
 import Map_main from './components/SearchPlace';
-import Query from './components/query';
+import Query from './components/QuSearchPlace';
 import Notice from './components/notice';
 import MyPage from './components/mypage';
 
