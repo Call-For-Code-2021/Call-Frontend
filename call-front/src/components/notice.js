@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+
 import './notice.css';
 import styled from "styled-components";
 
@@ -6,6 +8,9 @@ import ArtImg_news from "./img/art_img_news1.png";
 import ArtImg_skb from "./img/art_img_skbrodband.png";
 
 function notice(){
+
+    const onclickhandlenewsget
+
     return (
         <NoticeArea>
             <div className="notice">
