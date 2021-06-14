@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react'
 
 import './query.css';
 import Call from './img/call.png';
+import Ping from './img/ping.png';
 
 const { kakao } = window
 
@@ -70,26 +71,27 @@ const MapContainer = ({ searchPlace }) => {
   return (
     <>
       <div style={{marginTop: '10vh'}}></div>
-      <div id="result-list">
-        {Places.map((item, i) => (
+        <div id="result-list">
+          {Places.map((item, i) => (
           <div key={i} style={{ marginTop: '4vh'}}>
             
-            <div>
-              <h5 id="place_name"><span id="place_count">{i + 1}  </span>{item.place_name}</h5>
-              {item.road_address_name ? (
-                <div>
-                  <span>{item.road_address_name}</span>
+              <div>
+               <h5 id="place_name"><span id="place_count">{i + 1}  </span>{item.place_name}</h5>
+               {item.road_address_name ? (
+                 <div>
+                   <img src={Ping} id="ping"></img>
+                   <span>{item.road_address_name}</span>
+                    <span>{item.address_name}</span>
+                 </div>
+                ) : (
                   <span>{item.address_name}</span>
-                </div>
-              ) : (
-                <span>{item.address_name}</span>
-              )}
-              <span><img src={Call} id="call"></img>{item.phone}</span>
+                )}
+               <span><img src={Call} id="call"></img>{item.phone}</span>
+             </div>
             </div>
-          </div>
-        ))}
-        <div id="pagination"></div>
-      </div>
+          ))}
+          <div id="pagination"></div>
+       </div>
       <div style={{marginBottom: '12vh'}}></div>
     </>
   )
