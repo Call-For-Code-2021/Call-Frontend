@@ -12,32 +12,90 @@
     background-color: rgb(255, 255, 255);
     z-index:10;
     position:fixed;
+    overflow:scroll;
 }
-#bt_main{
-    width:80vw;
-    height:20vh;
+#el_main{
+    width:20vw;
+    height:auto;
+    border:2px solid rgb(62, 184, 58);
+    border-radius: 30%;
+    margin: 3vh 28.5vw;
+    margin-right: 0;
+
+}
+a{
+    padding-bottom: 3000px;
 }
 #X_box{
     position: absolute;
     right: 0;
-    margin:0;
+    margin:1vh;
     padding: 0;
-    background-color:rgb(151, 255, 130);
+    border-radius: 20%;
 }
 #X{
-    width:23px;
-    height:23px;
+    width:2.6vh;
+    height:2.6vh;
     margin:0;
     padding:0;
+    background-color:white;
+    border-radius: 50%;
+    
+}
+h3{
+    text-align: center;
+    font-weight: bolder;
+}
+h5{
+    text-align: center;
+    font-weight: bolder;
+    color:rgb(138, 138, 138);
+}
+#jum{
+    margin:0;
+    margin-right: 2vw;
+    margin-top: 3px;
+    padding:0;
+}
+#star_sum{
+    text-align: center;
+    margin-left: 24vw;
+    display: inline-flex;
+    margin-top: 1vh;
+}
+#star{
+    width:4vw;
+    height:auto;
+    margin: 1%;
+}
+#inf, #inf_2{
+    display: flex;
+    margin: 0 auto;
+}
+#time, #cup{
+    float: right;
 }
 #place_count{
     font-size: 30px;
     color: rgb(67, 114, 63);
 }
+#more{
+    margin-left: 4vw;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #278f2b;
+    font-size: 16px;
+    padding: 0.4vh 1vw;
+    border-radius: 10%;
+}
 #result-list{
     margin: 0 auto;
     margin-left: 10vw;
     z-index:1;
+}
+#result-list-li{
+    padding-bottom: 5vh;
+    border-bottom: 1px solid;
 }
 #pagination{
     padding: 0;
@@ -47,7 +105,6 @@
 #place_name{
     font-weight: bold;
     color: rgb(116, 214, 107);
-    border-bottom: 1px solid;
 }
 .page-count, .on{
     margin: 0 auto;
@@ -55,16 +112,16 @@
 .page-count{
     padding: 10px;
     font-size: 20px;
-    color: rgb(101, 184, 93);
+    color: rgb(73, 134, 67);
 }
 .on{
     padding: 10px;
     font-size: 27px;
-    color: rgb(124, 223, 115);
+    color: rgb(39, 255, 20);
     font-weight: bold;
 }
 .page-count:hover, .on:hover{
-    color: rgb(124, 223, 115);
+    color: rgb(73, 134, 67);
 }
 #call{
     padding: 0;

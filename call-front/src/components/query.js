@@ -4,7 +4,9 @@ import './query.css';
 import Call from './img/call.png';
 import Ping from './img/ping.png';
 import X from './img/x.png';
-import Main from './img/bt_main.jpg'
+import Logo from './img/el_logo.png';
+import Star from './img/star.png';
+import Star_none from './img/star_none.png';
 
 const { kakao } = window
 
@@ -77,9 +79,28 @@ const MapContainer = ({ searchPlace }) => {
     <>
       <div id="place_page_bg">
         <div id="place_page">
-          <img src={Main} id="bt_main"></img>
+          <img src={Logo} id="el_main"></img>
           <button onClick={() => document.getElementById("place_page_bg").style.visibility="hidden"} id="X_box"><img src={X} id="X"></img></button>
-
+          <h3>엘카페 커피로스터스</h3>
+          <h5>카페</h5>
+          
+          <div id="star_sum">
+            <div id = "jum">4.0</div>
+            <img src={Star} id="star"/>
+            <img src={Star} id="star"/>
+            <img src={Star} id="star"/>
+            <img src={Star} id="star"/>
+            <img src={Star_none} id="star"/>
+          </div>
+          <div id="inf">
+            <div>혜화역에서 29m</div>
+            <div id="time">07:00~2100</div>
+          </div>
+          <div id="inf_2">
+            <div>1522-3232</div>
+            <div id="cup">친환경 용기</div>
+          </div>
+          <div id="a">a</div>
         </div>
       </div>
       
@@ -88,12 +109,12 @@ const MapContainer = ({ searchPlace }) => {
           {Places.map((item, i) => (
           <div key={i} style={{ marginTop: '4vh'}}>
             
-              <div>
-               <h5 id="place_name">
+              <div id="result-list-li">
+               <h2 id="place_name">
                  <span id="place_count">{i + 1}  </span>
                  {item.place_name}
-                 <button onClick={() => document.getElementById("place_page_bg").style.visibility="visible"}>Click Me!</button>
-                </h5>
+                 <button onClick={() => document.getElementById("place_page_bg").style.visibility="visible"} id="more">더보기</button>
+                </h2>
 
                {item.road_address_name ? (
                  <div>
