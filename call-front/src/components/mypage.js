@@ -8,6 +8,7 @@ import "./mypage.css";
 import LeafImg from "./img/leaf.png";
 import UserImg from "./img/user.png";
 import EditImg from "./img/edit.png";
+import {map} from "react-bootstrap/ElementChildren";
 
 function Users() {
 
@@ -91,7 +92,7 @@ function Users() {
                         <span class="UserInfo">
                             <span id="UserName">
                                 이한나{/* {users.map(user => (<div key={user.id}>{user.username}</div>))} */}
-                                {users.name}
+                                {users.map(user => (<div>{user.username}</div>))}
                             </span>&nbsp;님
                         </span>
                         <br></br>
