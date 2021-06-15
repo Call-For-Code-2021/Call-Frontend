@@ -1,5 +1,5 @@
-import React from 'react';
-// import axios from 'axios';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 import Cookies from "universal-cookie";
 import {Link} from "react-router-dom";
 
@@ -16,9 +16,35 @@ function Users() {
     const handleclicklogout = () => {
         cookies.remove('UTG', {path: '/'});
     }
-    // const [users, setUsers] = useState(null);
-    // const [loading, setLoading] = useState(false);
-    // const [error, setError] = useState(null);
+
+    const [users, setUsers] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                setError(null);
+                setUsers(null);
+                setLoading(true);
+                console.log(cookies.get('UTG'));
+                const cookieresponse = await axios({
+                    method: "get",
+                    url: "http://charong.herokuapp.com/auth/login?jwt=" + cookies.get('UTG'),
+                });
+                console.log(cookieresponse.data);
+                const response = await axios({
+                    method: "get",
+                    url: "https://charong.herokuapp.com/auth/login?id="+cookieresponse.data,
+                });
+                setUsers(response.data);
+            } catch (e) {
+                setError(e);
+            }
+            setLoading(false);
+        };
+        fetchUsers();
+    }, []);
 
     // useEffect(() => {
     //     const fetchUsers = async () => {
@@ -41,9 +67,13 @@ function Users() {
     //     fetchUsers();
     // }, []);
 
-    // if (loading) return <div>로딩중..</div>;
-    // if (error) return <div>에러가 발생했습니다</div>;
-    // if (!users) return null;
+    if(loading)
+        return <div>On Loading...</div>;
+    if(error)
+        return <div>Error Occurred</div>;
+    if(!users)
+        return null;
+
     return (
         <div className="query_section">
             <div class="div_my">
