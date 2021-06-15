@@ -91,6 +91,7 @@ function Users() {
                         <span class="UserInfo">
                             <span id="UserName">
                                 이한나{/* {users.map(user => (<div key={user.id}>{user.username}</div>))} */}
+                                {users.name}
                             </span>&nbsp;님
                         </span>
                         <br></br>
