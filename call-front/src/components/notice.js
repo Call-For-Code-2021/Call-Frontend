@@ -24,7 +24,7 @@ function Notice(){
                     method: "get",
                     url: "https://charong.herokuapp.com/newsget_all?from=0&limit=5",
                     from: 0,
-                    limit: 5
+                    limit: 5,
                 });
                 setNews(response.data);
             } catch (e) {
