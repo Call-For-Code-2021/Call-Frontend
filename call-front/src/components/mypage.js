@@ -31,7 +31,7 @@ function Users() {
                 console.log(cookies.get('UTG'));
                 const cookieresponse = await axios({
                     method: "get",
-                    url: "http://charong.herokuapp.com/auth/login?jwt_token=" + cookies.get('UTG'),
+                    url: "https://charong.herokuapp.com/auth/login?jwt_token=" + cookies.get('UTG'),
                 });
                 console.log(cookieresponse.data);
                 console.log(cookieresponse.data['id']);
@@ -41,6 +41,7 @@ function Users() {
                 });
                 console.log(response.data);
                 setUsers(response.data);
+
             } catch (e) {
                 setError(e);
             }
@@ -92,7 +93,7 @@ function Users() {
                         <span className="UserInfo">
                             <span id="UserName">
                                 {/* {users.map(user => (<div key={user.id}>{user.username}</div>))} */}
-
+                                {users.response.data["username"]}
                             </span>&nbsp;님
                         </span>
                         <br/>
