@@ -41,7 +41,7 @@ function Users() {
                 });
                 console.log(response.data);
                 setUsers(response.data);
-
+                const responsehtml = "<div></div>";
             } catch (e) {
                 setError(e);
             }
@@ -93,7 +93,7 @@ function Users() {
                         <span className="UserInfo">
                             <span id="UserName">
                                 {/* {users.map(user => (<div key={user.id}>{user.username}</div>))} */}
-                                {users.map(user => (users.response.data["username"]))}
+                                {Users.name}
                             </span>&nbsp;님
                         </span>
                         <br/>
