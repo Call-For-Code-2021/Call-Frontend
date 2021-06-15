@@ -36,7 +36,7 @@ function Users() {
                 console.log(cookieresponse.data['id']);
                 const response = await axios({
                     method: "get",
-                    url: "https://charong.herokuapp.com/auth/login?id="+cookieresponse.data['id'],
+                    url: "https://charong.herokuapp.com/auth/get_user?id="+cookieresponse.data['id'],
                 });
                 setUsers(response.data);
             } catch (e) {
