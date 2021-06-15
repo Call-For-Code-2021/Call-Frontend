@@ -3,6 +3,7 @@ import React, { useEffect, useState} from 'react'
 import './query.css';
 import Call from './img/call.png';
 import Ping from './img/ping.png';
+import X from './img/x.png';
 
 const { kakao } = window
 
@@ -73,18 +74,22 @@ const MapContainer = ({ searchPlace }) => {
 
   return (
     <>
-      <div id="place_page"></div>
+      <div id="place_page_bg">
+        <div id="place_page">
+          <button onClick={() => document.getElementById("place_page_bg").style.visibility="hidden"}><img src={X} id="X"></img></button>
+        </div>
+      </div>
+      
       <div style={{marginTop: '10vh'}}></div>
         <div id="result-list">
           {Places.map((item, i) => (
           <div key={i} style={{ marginTop: '4vh'}}>
             
               <div>
-              <hr></hr>
                <h5 id="place_name">
                  <span id="place_count">{i + 1}  </span>
                  {item.place_name}
-                 <button onClick={() => document.getElementById("place_page").style.visibility="visible"}>Click Me!</button>
+                 <button onClick={() => document.getElementById("place_page_bg").style.visibility="visible"}>Click Me!</button>
                 </h5>
 
                {item.road_address_name ? (
