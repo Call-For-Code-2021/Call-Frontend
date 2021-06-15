@@ -23,7 +23,7 @@ const App = () => {
             <meta name="mobile-web-app-capable" content="yes"></meta>
             <div className="content">
                 <Switch>
-                    <Route exact path="/" component={Home} />
+                    <Route exact path="/Call-Frontend/" component={Home} />
                     <Route path="/login" component={Login_main} />
                     <Route path="/map_main" component={Map_main} />
                     <Route path="/query" component={Query} />
