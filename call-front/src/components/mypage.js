@@ -41,7 +41,6 @@ function Users() {
                 });
                 console.log(response.data);
                 setUsers(response.data);
-                const responsehtml = "<div></div>";
             } catch (e) {
                 setError(e);
             }
