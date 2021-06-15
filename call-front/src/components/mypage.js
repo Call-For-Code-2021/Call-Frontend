@@ -32,6 +32,7 @@ function Users() {
                     method: "get",
                     url: "http://charong.herokuapp.com/auth/login?jwt_token=" + cookies.get('UTG'),
                 });
+                console.log(cookieresponse.data);
                 console.log(cookieresponse.data['id']);
                 const response = await axios({
                     method: "get",
