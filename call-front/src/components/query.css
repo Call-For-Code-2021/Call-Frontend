@@ -13,9 +13,22 @@
     z-index:10;
     position:fixed;
 }
+#bt_main{
+    width:80vw;
+    height:20vh;
+}
+#X_box{
+    position: absolute;
+    right: 0;
+    margin:0;
+    padding: 0;
+    background-color:rgb(151, 255, 130);
+}
 #X{
     width:23px;
     height:23px;
+    margin:0;
+    padding:0;
 }
 #place_count{
     font-size: 30px;

@@ -4,6 +4,7 @@ import './query.css';
 import Call from './img/call.png';
 import Ping from './img/ping.png';
 import X from './img/x.png';
+import Main from './img/bt_main.jpg'
 
 const { kakao } = window
 
@@ -76,7 +77,9 @@ const MapContainer = ({ searchPlace }) => {
     <>
       <div id="place_page_bg">
         <div id="place_page">
-          <button onClick={() => document.getElementById("place_page_bg").style.visibility="hidden"}><img src={X} id="X"></img></button>
+          <img src={Main} id="bt_main"></img>
+          <button onClick={() => document.getElementById("place_page_bg").style.visibility="hidden"} id="X_box"><img src={X} id="X"></img></button>
+
         </div>
       </div>
       
