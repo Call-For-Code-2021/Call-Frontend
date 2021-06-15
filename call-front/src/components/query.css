@@ -68,13 +68,47 @@ h5{
     height:auto;
     margin: 1%;
 }
-#inf, #inf_2{
-    display: flex;
-    margin: 0 auto;
+
+.des_table {
+    margin: 10px auto 0;
 }
-#time, #cup{
-    float: right;
+
+.des_tds {
+    padding: 10px;
 }
+
+.des_td {
+    width: 4vw;
+}
+
+.des_icon {
+    width: auto;
+    height: 4vw;
+}
+
+.des_icon2 {
+    width: auto;
+    height: 3vw;
+}
+
+.des_btn_con {
+
+}
+
+#btn_q {
+    width: 30vw;
+}
+
+.des_p {
+    font-size: small;
+    color: #939393;
+    text-align: center;
+}
+
+.orderlist {
+    width: 40vw;
+}
+
 #place_count{
     font-size: 30px;
     color: rgb(67, 114, 63);

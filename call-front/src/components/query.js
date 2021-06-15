@@ -1,4 +1,5 @@
 import React, { useEffect, useState} from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './query.css';
 import Call from './img/call.png';
@@ -7,6 +8,9 @@ import X from './img/x.png';
 import Logo from './img/el_logo.png';
 import Star from './img/star.png';
 import Star_none from './img/star_none.png';
+import Clock from './img/clock (1).png';
+import Leaf from './img/leaf.png';
+import Order from './img/orderlist.jpg';
 
 const { kakao } = window
 
@@ -92,15 +96,35 @@ const MapContainer = ({ searchPlace }) => {
             <img src={Star} id="star"/>
             <img src={Star_none} id="star"/>
           </div>
-          <div id="inf">
-            <div>혜화역에서 29m</div>
-            <div id="time">07:00~2100</div>
-          </div>
-          <div id="inf_2">
-            <div>1522-3232</div>
-            <div id="cup">친환경 용기</div>
-          </div>
-          <div id="a">a</div>
+          <table className="des_table">
+              <tr>
+                  <td className="des_td des_tds"><img src={Ping} alt="ping" className="des_icon"/></td>
+                  <td className="des_tds">혜화역에서 29m</td>
+                  <td className="des_td des_tds"><img src={Clock} alt="clock" className="des_icon2"/></td>
+                  <td className="des_tds">07:00~21:00</td>
+              </tr>
+              <tr>
+                  <td className="des_td des_tds"><img src={Call} alt="call" className="des_icon2"/></td>
+                  <td className="des_tds">1522-3232</td>
+                  <td className="des_td des_tds"><img src={Leaf} alt="leaf" className="des_icon2"/></td>
+                  <td className="des_tds">(친환경 용기)</td>
+              </tr>
+              <tr>
+                  <td colspan="4" className="des_btn_con">
+                      <p className="des_p"><button className="btn btn-outline-success" id="btn_q">주문 확정</button></p>
+                  </td>
+              </tr>
+              <tr>
+                  <td colspan="4">
+                      <p className="des_p">주문 확정 시 절약된 나무가 자라나요.</p>
+                  </td>
+              </tr>
+              <tr>
+                  <td colSpan="4">
+                      <p className="des_p"><img src={Order} alt="orderlist" className="orderlist"/></p>
+                  </td>
+              </tr>
+          </table>
         </div>
       </div>
       
