@@ -3,6 +3,7 @@ import React, { useEffect, useState} from 'react'
 import './query.css';
 import Call from './img/call.png';
 import Ping from './img/ping.png';
+import X from './img/x.png';
 
 const { kakao } = window
 
@@ -75,7 +76,7 @@ const MapContainer = ({ searchPlace }) => {
     <>
       <div id="place_page_bg">
         <div id="place_page">
-          <button onClick={() => document.getElementById("place_page_bg").style.visibility="hidden"}>X</button>
+          <button onClick={() => document.getElementById("place_page_bg").style.visibility="hidden"}><img src={X} id="X"></img></button>
         </div>
       </div>
       

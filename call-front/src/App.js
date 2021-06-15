@@ -1,5 +1,7 @@
 import React from 'react';
 
+//npm run deploy
+
 // 페이지 내부
 import Nav from './components/nav';
 
