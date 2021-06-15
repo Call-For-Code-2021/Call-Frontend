@@ -9,7 +9,7 @@ import ArtImg_skb from "./img/art_img_skbrodband.png";
 
 function notice(){
 
-    const onclickhandlenewsget
+    // const onclickhandlenewsget
 
     return (
         <NoticeArea>
