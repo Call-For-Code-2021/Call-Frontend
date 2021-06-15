@@ -93,7 +93,7 @@ function Users() {
                         <span className="UserInfo">
                             <span id="UserName">
                                 {/* {users.map(user => (<div key={user.id}>{user.username}</div>))} */}
-                                {users.response.data["username"]}
+                                {users.map(user => (users.response.data["username"]))}
                             </span>&nbsp;님
                         </span>
                         <br/>
