@@ -38,6 +38,7 @@ function Users() {
                     method: "get",
                     url: "https://charong.herokuapp.com/auth/get_user?id="+cookieresponse.data['id'],
                 });
+                console.log(response.data);
                 setUsers(response.data);
             } catch (e) {
                 setError(e);
