@@ -6,6 +6,8 @@ import Ping from './img/ping.png';
 
 const { kakao } = window
 
+
+
 const MapContainer = ({ searchPlace }) => {
 
   // 검색결과 배열에 담아줌
@@ -67,9 +69,11 @@ const MapContainer = ({ searchPlace }) => {
       paginationEl.appendChild(fragment)
     }
   }, [searchPlace])
+  
 
   return (
     <>
+      <div id="place_page"></div>
       <div style={{marginTop: '10vh'}}></div>
         <div id="result-list">
           {Places.map((item, i) => (
@@ -77,8 +81,12 @@ const MapContainer = ({ searchPlace }) => {
             
               <div>
               <hr></hr>
-               <h5 id="place_name"><span id="place_count">{i + 1}  </span>{item.place_name}</h5>
-               
+               <h5 id="place_name">
+                 <span id="place_count">{i + 1}  </span>
+                 {item.place_name}
+                 <button onClick={() => document.getElementById("place_page").style.visibility="visible"}>Click Me!</button>
+                </h5>
+
                {item.road_address_name ? (
                  <div>
                    <img src={Ping} id="ping"></img>
@@ -97,6 +105,7 @@ const MapContainer = ({ searchPlace }) => {
       <div style={{marginBottom: '12vh'}}></div>
     </>
   )
+
 }
 
 
