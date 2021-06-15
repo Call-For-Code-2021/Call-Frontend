@@ -79,7 +79,7 @@ function Users() {
 
     return (
         <div className="query_section">
-            <div class="div_my">
+            <div className="div_my">
                 <header>
                     <h3>my페이지</h3>
                     <Link className="nav-link" to="/login">
@@ -87,34 +87,34 @@ function Users() {
                     </Link>
                 </header>
                 <section>
-                    <div class="profile">
+                    <div className="profile">
                         <img src={UserImg} alt="User" id="user"/>
-                        <span class="UserInfo">
+                        <span className="UserInfo">
                             <span id="UserName">
                                 {/* {users.map(user => (<div key={user.id}>{user.username}</div>))} */}
-                                {(user => (<div>{user.username}</div>))}
+
                             </span>&nbsp;님
                         </span>
-                        <br></br>
-                        <a href="/" class="scrap_p">총 스크랩 횟수 : 5번</a>
+                        <br/>
+                        <a href="/" className="scrap_p">총 스크랩 횟수 : 5번</a>
                         <a href="/"><img src={EditImg} alt="Edit" id="edit"/></a>
                     </div>
-                    <br></br>
-                    <p class="st">이한나 님의 주문으로 절약된 나무</p>
-                    <img src={LeafImg} alt="Leaf" class="leaf"/>
-                    <img src={LeafImg} alt="Leaf" class="leaf"/>
-                    <img src={LeafImg} alt="Leaf" class="leaf"/>
-                    <p class="st">새 소식</p>
-                    <div class="news">
-                        <span class="n_name">환경뉴스</span> 님의 새로운 기사가 있어요.
+                    <br/>
+                    <p className="st">이한나 님의 주문으로 절약된 나무</p>
+                    <img src={LeafImg} alt="Leaf" className="leaf"/>
+                    <img src={LeafImg} alt="Leaf" className="leaf"/>
+                    <img src={LeafImg} alt="Leaf" className="leaf"/>
+                    <p className="st">새 소식</p>
+                    <div className="news">
+                        <span className="n_name">환경뉴스</span> 님의 새로운 기사가 있어요.
                     </div>
-                    <div class="read_news">
-                        <span class="n_name">환경뉴스</span> 님의 새로운 기사가 있어요.
+                    <div className="read_news">
+                        <span className="n_name">환경뉴스</span> 님의 새로운 기사가 있어요.
                     </div>
-                    <div class="read_news">
-                        <span class="n_name">환경뉴스</span> 님의 새로운 기사가 있어요.
+                    <div className="read_news">
+                        <span className="n_name">환경뉴스</span> 님의 새로운 기사가 있어요.
                     </div>
-                    <br></br>
+                    <br/>
                 </section>
             </div>
         </div>
