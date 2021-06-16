@@ -35,16 +35,26 @@ const List =(props) => {
             
             <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
             <Link to="/shops">
-                <button className="btn btn-outline-success">가게 등록</button>
+                <p id="t_a-c">
+                    <button className="btn btn-outline-success" id="btn_o">가게 등록</button>
+                </p>
             </Link>
-            <ul>
-                {shops && shops.map(id =>
-                    <div>
-                        <li key={id.shop}>{id.shop}</li>
-                        <li key={id.user_id}>{id.user_id}</li>
-                    </div>
-                )}
-            </ul>
+            <p className="table_form" id="t_a-c">
+                <table>
+                    {shops && shops.map(id =>
+                        <tr>
+                            <td>&nbsp;&nbsp;매장명 :&nbsp;</td>
+                            <td key={id.shop}>
+                                {id.shop}
+                            </td>
+                            <td>&nbsp;|&nbsp;사업주명 :&nbsp;</td>
+                            <td key={id.user_id}>
+                                {id.user_id}&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                    )}
+                </table>
+            </p>
         </div>
     );
 
