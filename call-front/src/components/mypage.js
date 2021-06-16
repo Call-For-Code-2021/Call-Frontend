@@ -3,13 +3,13 @@ import axios from 'axios';
 import Cookies from "universal-cookie";
 import {Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {map} from "react-bootstrap/ElementChildren";
 
 import "./mypage.css";
 
 import LeafImg from "./img/leaf.png";
 import UserImg from "./img/user.png";
 import EditImg from "./img/edit.png";
-import {map} from "react-bootstrap/ElementChildren";
 
 const Users = (props) => {
 
@@ -20,8 +20,30 @@ const Users = (props) => {
     }
 
     const [users, setUsers] = useState(null);
+    const [news, setNews] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+
+    useEffect(async () => {
+        try {
+            let json = await axios({
+                url: "https://charong.herokuapp.com/news/get_all?from=0&limit=5",
+                method: "get",
+                data: {
+                    from: 0,
+                    limit: 5
+                }
+            });
+            let data = [];
+            for (let news_v in json.data) {
+                data.push(json.data[news_v])
+            }
+            console.log(data);
+            setNews(data)
+        } catch (e){
+            console.log(e)
+        }
+    }, []);
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -106,12 +128,9 @@ const Users = (props) => {
                     <img src={LeafImg} alt="Leaf" className="leaf"/>
                     <p className="st">새 소식</p>
                     <div className="news">
-                        <span className="n_name">환경뉴스</span> 님의 새로운 기사가 있어요.
-                    </div>
-                    <div className="read_news">
-                        <span className="n_name">환경뉴스</span> 님의 새로운 기사가 있어요.
-                    </div>
-                    <div className="read_news">
+                        {news && news.map(id =>
+                            <span className="n_name" key={id.writer}>{id.writer}</span>님의 새로운 기사가 있어요.
+                        )}
                         <span className="n_name">환경뉴스</span> 님의 새로운 기사가 있어요.
                     </div>
                     <br/>
