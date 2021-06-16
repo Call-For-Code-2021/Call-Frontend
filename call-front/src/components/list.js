@@ -6,6 +6,7 @@ import './list.css';
 const List =(props) => {
 
     const [shops, setList] = useState();
+
     useEffect(async () =>{
         try {
             let json = await axios({
@@ -36,8 +37,15 @@ const List =(props) => {
                 <button>가게 등록</button>
             </Link>
             <ul>
-                {shops && shops.map( id =>
-                    <li key={id.shop}><a href="#">{id.shop}</a></li>
+                {/*{shops && shops.map( id =>*/}
+                {/*    <li key={id.shop}>{id.shop}</li>*/}
+                {/*    <li key={id.user_id}>{id.user_id}</li>*/}
+                {/*)}*/}
+                {shops && shops.map(id =>
+                    <div>
+                        <li key={id.shop}>{id.shop}</li>
+                        <li key={id.user_id}>{id.user_id}</li>
+                    </div>
                 )}
             </ul>
         </div>
