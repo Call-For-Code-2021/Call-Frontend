@@ -91,7 +91,6 @@ const Users = (props) => {
                         <img src={UserImg} alt="User" id="user"/>
                         <span className="UserInfo">
                             <span id="UserName">
-                                {/* {users.map(user => (<div key={user.id}>{user.username}</div>))} */}
                                 {users.username}
                             </span>&nbsp;님
                         </span>
