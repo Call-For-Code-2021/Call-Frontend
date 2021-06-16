@@ -3,7 +3,6 @@ import axios from 'axios';
 import Cookies from "universal-cookie";
 import {Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {map} from "react-bootstrap/ElementChildren";
 
 import "./mypage.css";
 
@@ -127,11 +126,13 @@ const Users = (props) => {
                     <img src={LeafImg} alt="Leaf" className="leaf"/>
                     <img src={LeafImg} alt="Leaf" className="leaf"/>
                     <p className="st">새 소식</p>
-                    {news && news.map(id =>
-                        <div className="news">
-                            <span className="n_name" key={id.writer}>{id.writer}</span>의 새로운 기사가 있어요!
-                        </div>
-                    )}
+                    <Link className="nav-link" to="/notion">
+                        {news && news.map(id =>
+                            <div className="news">
+                                <span className="n_name" key={id.writer}>{id.writer}</span>의 새로운 기사가 있어요!
+                            </div>
+                        )}
+                    </Link>
                     <br/>
                 </section>
             </div>
