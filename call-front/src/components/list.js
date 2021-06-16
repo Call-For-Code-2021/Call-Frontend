@@ -42,16 +42,18 @@ const List =(props) => {
             <p className="table_form" id="t_a-c">
                 <table>
                     {shops && shops.map(id =>
-                        <tr>
-                            <td>&nbsp;&nbsp;매장명 :&nbsp;</td>
+                        <div>
+                            <hr></hr>
+                            <td>매장명&nbsp;:&nbsp;</td>
                             <td key={id.shop}>
                                 {id.shop}
                             </td>
-                            <td>&nbsp;|&nbsp;사업주명 :&nbsp;</td>
+                            <td>&nbsp;|&nbsp;사업주명&nbsp;:&nbsp;</td>
                             <td key={id.user_id}>
                                 {id.user_id}&nbsp;&nbsp;
                             </td>
-                        </tr>
+                            <hr></hr>
+                        </div>
                     )}
                 </table>
             </p>
