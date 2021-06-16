@@ -10,7 +10,7 @@ import UserImg from "./img/user.png";
 import EditImg from "./img/edit.png";
 import {map} from "react-bootstrap/ElementChildren";
 
-function Users() {
+const Users = (props) => {
 
     const cookies = new Cookies();
 
@@ -92,11 +92,7 @@ function Users() {
                         <span className="UserInfo">
                             <span id="UserName">
                                 {/* {users.map(user => (<div key={user.id}>{user.username}</div>))} */}
-                                <ul>
-                                    {users && users.map( id =>
-                                        <li key={id.user}><a href="#">{id.user}</a></li>,
-                                    )}
-                                </ul>
+                                {users.username}
                             </span>&nbsp;님
                         </span>
                         <br/>
