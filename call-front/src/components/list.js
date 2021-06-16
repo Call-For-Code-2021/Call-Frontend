@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 import './list.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const List =(props) => {
 
@@ -34,7 +35,7 @@ const List =(props) => {
             
             <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
             <Link to="/shops">
-                <button>가게 등록</button>
+                <button className="btn btn-outline-success">가게 등록</button>
             </Link>
             <ul>
                 {shops && shops.map(id =>
