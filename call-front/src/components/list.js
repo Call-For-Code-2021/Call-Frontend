@@ -8,7 +8,7 @@ const List =(props) => {
     useEffect(async () =>{
         try {
             let json = await axios({
-                url: "http://charong.herokuapp.com/buy/list?from=0&limit=5",
+                url: "//charong.herokuapp.com/buy/list?from=0&limit=5",
                 method: "get",
                 data: {
                     from: 0,
@@ -29,8 +29,9 @@ const List =(props) => {
 
     return(
         <div>
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
             <Link to="/shops">
-                <button>가게 등록</button>
+                <button>가게 등록aaaaaaa</button>
             </Link>
             <ul>
                 {shops && shops.map( id =>
