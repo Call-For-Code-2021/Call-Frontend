@@ -81,6 +81,7 @@ const MapContainer = ({ searchPlace }) => {
 
   return (
     <>
+      <meta name='viewport' content='initial-scale=1, viewport-fit=cover'></meta>
       <div id="place_page_bg">
         <div id="place_page">
           <img src={Logo} id="el_main"></img>

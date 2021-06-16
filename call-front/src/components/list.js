@@ -29,6 +29,7 @@ const List =(props) => {
 
     return(
         <div>
+            
             <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
             <Link to="/shops">
                 <button>가게 등록</button>

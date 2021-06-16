@@ -19,6 +19,7 @@ const QuSearchPlace = () => {
 
   return (
     <>
+      <meta name='viewport' content='initial-scale=1, viewport-fit=cover'></meta>
       <div id="searchP">
         <form className="d-flex" id="inputForm" onSubmit={handleSubmit}>
           <input
