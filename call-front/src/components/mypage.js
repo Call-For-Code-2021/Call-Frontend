@@ -127,11 +127,11 @@ const Users = (props) => {
                     <img src={LeafImg} alt="Leaf" className="leaf"/>
                     <img src={LeafImg} alt="Leaf" className="leaf"/>
                     <p className="st">새 소식</p>
-                    <div className="news">
-                        {news && news.map(id =>
+                    {news && news.map(id =>
+                        <div className="news">
                             <span className="n_name" key={id.writer}>{id.writer}</span>
-                        )}
-                    </div>
+                        </div>
+                    )}
                     <br/>
                 </section>
             </div>
