@@ -126,7 +126,7 @@ const Users = (props) => {
                     <img src={LeafImg} alt="Leaf" className="leaf"/>
                     <img src={LeafImg} alt="Leaf" className="leaf"/>
                     <p className="st">새 소식</p>
-                    <Link className="nav-link" to="/notion">
+                    <Link className="nav-link" to="/notice">
                         {news && news.map(id =>
                             <div className="news">
                                 <span className="n_name" key={id.writer}>{id.writer}</span>의 새로운 기사가 있어요!
