@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Cookies from "universal-cookie";
 import {Link} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./mypage.css";
 
@@ -83,7 +84,7 @@ const Users = (props) => {
                 <header>
                     <h3>my페이지</h3>
                     <Link className="nav-link" to="/login">
-                        <button onClick={handleclicklogout}>Logout</button>
+                        <button onClick={handleclicklogout} className="btn btn-outline-success">Logout</button>
                     </Link>
                 </header>
                 <section>
@@ -99,7 +100,7 @@ const Users = (props) => {
                         <a href="/"><img src={EditImg} alt="Edit" id="edit"/></a>
                     </div>
                     <br/>
-                    <p className="st">이한나 님의 주문으로 절약된 나무</p>
+                    <p className="st">{users.name} 님의 주문으로 절약된 나무</p>
                     <img src={LeafImg} alt="Leaf" className="leaf"/>
                     <img src={LeafImg} alt="Leaf" className="leaf"/>
                     <img src={LeafImg} alt="Leaf" className="leaf"/>
