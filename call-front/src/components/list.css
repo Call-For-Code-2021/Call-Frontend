@@ -1,0 +1,25 @@
+#t_a-c {
+    text-align: center;
+}
+
+#btn_o {
+    margin: 0;
+    padding: 0;
+    width: 20%;
+}
+
+.table_form {
+    width: 80%;
+}
+
+#t_a-c > table {
+    margin: 0 auto;
+    border: 1px solid #007100;
+    border-radius: 10%;
+}
+
+#t_a-c > table > tr > td {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
