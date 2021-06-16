@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/Call-Frontend/static/css/main.81216b92.chunk.css",
-    "main.js": "/Call-Frontend/static/js/main.39866f19.chunk.js",
-    "main.js.map": "/Call-Frontend/static/js/main.39866f19.chunk.js.map",
+    "main.css": "/Call-Frontend/static/css/main.47681c4b.chunk.css",
+    "main.js": "/Call-Frontend/static/js/main.324bb393.chunk.js",
+    "main.js.map": "/Call-Frontend/static/js/main.324bb393.chunk.js.map",
     "runtime-main.js": "/Call-Frontend/static/js/runtime-main.f896dc02.js",
     "runtime-main.js.map": "/Call-Frontend/static/js/runtime-main.f896dc02.js.map",
     "static/css/2.61b4cb56.chunk.css": "/Call-Frontend/static/css/2.61b4cb56.chunk.css",
-    "static/js/2.3448319a.chunk.js": "/Call-Frontend/static/js/2.3448319a.chunk.js",
-    "static/js/2.3448319a.chunk.js.map": "/Call-Frontend/static/js/2.3448319a.chunk.js.map",
+    "static/js/2.2c30a37b.chunk.js": "/Call-Frontend/static/js/2.2c30a37b.chunk.js",
+    "static/js/2.2c30a37b.chunk.js.map": "/Call-Frontend/static/js/2.2c30a37b.chunk.js.map",
     "static/js/3.afac3fb3.chunk.js": "/Call-Frontend/static/js/3.afac3fb3.chunk.js",
     "static/js/3.afac3fb3.chunk.js.map": "/Call-Frontend/static/js/3.afac3fb3.chunk.js.map",
     "index.html": "/Call-Frontend/index.html",
     "static/css/2.61b4cb56.chunk.css.map": "/Call-Frontend/static/css/2.61b4cb56.chunk.css.map",
-    "static/css/main.81216b92.chunk.css.map": "/Call-Frontend/static/css/main.81216b92.chunk.css.map",
-    "static/js/2.3448319a.chunk.js.LICENSE.txt": "/Call-Frontend/static/js/2.3448319a.chunk.js.LICENSE.txt",
+    "static/css/main.47681c4b.chunk.css.map": "/Call-Frontend/static/css/main.47681c4b.chunk.css.map",
+    "static/js/2.2c30a37b.chunk.js.LICENSE.txt": "/Call-Frontend/static/js/2.2c30a37b.chunk.js.LICENSE.txt",
     "static/media/art_img_news1.8ddbf39f.png": "/Call-Frontend/static/media/art_img_news1.8ddbf39f.png",
     "static/media/art_img_skbrodband.83db4780.png": "/Call-Frontend/static/media/art_img_skbrodband.83db4780.png",
     "static/media/call.f12b83b5.png": "/Call-Frontend/static/media/call.f12b83b5.png",
+    "static/media/clock (1).dc550a9f.png": "/Call-Frontend/static/media/clock (1).dc550a9f.png",
     "static/media/home.031c88ab.png": "/Call-Frontend/static/media/home.031c88ab.png",
     "static/media/leaf.c2f375dd.png": "/Call-Frontend/static/media/leaf.c2f375dd.png",
     "static/media/loupe.3e402355.png": "/Call-Frontend/static/media/loupe.3e402355.png",
     "static/media/notice.css": "/Call-Frontend/static/media/malgun.a41f507b.ttf",
+    "static/media/orderlist.c2e1518a.jpg": "/Call-Frontend/static/media/orderlist.c2e1518a.jpg",
     "static/media/ping.40a225b7.png": "/Call-Frontend/static/media/ping.40a225b7.png",
     "static/media/star.9c1b96c6.png": "/Call-Frontend/static/media/star.9c1b96c6.png",
     "static/media/star_none.3f36c41f.png": "/Call-Frontend/static/media/star_none.3f36c41f.png",
@@ -29,8 +31,8 @@
   "entrypoints": [
     "static/js/runtime-main.f896dc02.js",
     "static/css/2.61b4cb56.chunk.css",
-    "static/js/2.3448319a.chunk.js",
-    "static/css/main.81216b92.chunk.css",
-    "static/js/main.39866f19.chunk.js"
+    "static/js/2.2c30a37b.chunk.js",
+    "static/css/main.47681c4b.chunk.css",
+    "static/js/main.324bb393.chunk.js"
   ]
 }
