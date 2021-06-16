@@ -42,9 +42,6 @@ const List =(props) => {
                         <li key={id.shop}>{id.shop}</li>
                         <li key={id.user_id}>{id.user_id}</li>
                     </div>
-                {shops && shops.map( id =>
-                    <li key={id.shop}><a href="#">{id.shop}</a></li>,
-                    <li key={id.user_id}><a href="#">{id.user_id}</a></li>
                 )}
             </ul>
         </div>
