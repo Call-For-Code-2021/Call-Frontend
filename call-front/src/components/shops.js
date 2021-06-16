@@ -50,15 +50,15 @@ const shops = () => {
                     <button>back</button>
                 </Link>
                 </div>
-                <input name='shop_name' id="shop_name" onChange={onChange} placeholder="shop name"/>
+                <input name='shop_name' id="shop_name" onChange={onChange} placeholder="가게 이름 / shop name"/>
                 {/* 가게이름 */}
-                <input name="address" id="address" onChange={onChange} placeholder="address"/>
+                <input name="address" id="address" onChange={onChange} placeholder="가게 주소 / shop address"/>
                 {/* 가게주소 */}
-                <input name="user_id" id="user_id" onChange={onChange} placeholder="user_id"/>
+                <input name="user_id" id="user_id" onChange={onChange} placeholder="사업자명 / user_id"/>
                 {/* 사업자명 */}
-                <input name="shop_num" id="shop_num" onChange={onChange} placeholder="shop_num"/>
+                <input name="shop_num" id="shop_num" onChange={onChange} placeholder="전화번호 / shop_num"/>
                 {/* 전화번호 */}
-                <input name="dish_type" id="dish_type" onChange={onChange} placeholder="dish_type"/>
+                <input name="dish_type" id="dish_type" onChange={onChange} placeholder="그릇타입 / dish_type"/>
                 {/* 그릇타입 */}
                 <button onClick={func}>register</button>
             </div>
