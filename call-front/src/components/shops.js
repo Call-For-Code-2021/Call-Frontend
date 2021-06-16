@@ -44,6 +44,7 @@ const shops = () => {
         // eslint-disable-next-line react-hooks/rules-of-hooks
         return (
             <div>
+                <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
                 <div>
                 <Link to="/list">
                     <button>back</button>
