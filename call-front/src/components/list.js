@@ -31,7 +31,7 @@ const List =(props) => {
         <div>
             <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
             <Link to="/shops">
-                <button>가게 등록aaaaaaa</button>
+                <button>가게 등록</button>
             </Link>
             <ul>
                 {shops && shops.map( id =>
