@@ -50,6 +50,7 @@ article {
 
 .article_body > h3 {
     clear: both;
+    text-align: left;
     font-weight: bold;
     padding-top: 10px;
     font-size: 1.2em;
