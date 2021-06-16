@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Call-Frontend/static/css/main.0379d038.chunk.css",
-    "main.js": "/Call-Frontend/static/js/main.a0249284.chunk.js",
-    "main.js.map": "/Call-Frontend/static/js/main.a0249284.chunk.js.map",
+    "main.js": "/Call-Frontend/static/js/main.ceb258ff.chunk.js",
+    "main.js.map": "/Call-Frontend/static/js/main.ceb258ff.chunk.js.map",
     "runtime-main.js": "/Call-Frontend/static/js/runtime-main.f896dc02.js",
     "runtime-main.js.map": "/Call-Frontend/static/js/runtime-main.f896dc02.js.map",
     "static/css/2.61b4cb56.chunk.css": "/Call-Frontend/static/css/2.61b4cb56.chunk.css",
@@ -33,6 +33,6 @@
     "static/css/2.61b4cb56.chunk.css",
     "static/js/2.2c30a37b.chunk.js",
     "static/css/main.0379d038.chunk.css",
-    "static/js/main.a0249284.chunk.js"
+    "static/js/main.ceb258ff.chunk.js"
   ]
 }
