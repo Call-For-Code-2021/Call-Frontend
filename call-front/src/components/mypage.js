@@ -102,19 +102,17 @@ const Users = (props) => {
     return (
         <div className="query_section">
             <div className="div_my">
-                <header>
-                    <h3>my페이지</h3>
-                    <Link className="nav-link" to="/login">
-                        <button onClick={handleclicklogout} className="btn btn-outline-success">Logout</button>
-                    </Link>
-                </header>
+                    <h3>MYPAGE</h3>
                 <section>
                     <div className="profile">
                         <img src={UserImg} alt="User" id="user"/>
                         <span className="UserInfo">
                             <span id="UserName">
                                 {users.name}
-                            </span>&nbsp;님
+                            </span>
+                            <Link className="nav-link" to="/login">
+                                <button onClick={handleclicklogout} className="btn btn-outline-success">Logout</button>
+                            </Link>
                         </span>
                         <br/>
                         <a href="/" className="scrap_p">총 스크랩 횟수 : 5번</a>
