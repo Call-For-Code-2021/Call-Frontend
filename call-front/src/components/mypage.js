@@ -129,7 +129,7 @@ const Users = (props) => {
                     <p className="st">새 소식</p>
                     {news && news.map(id =>
                         <div className="news">
-                            <span className="n_name" key={id.writer}>{id.writer}</span><p>의 새로운 기사가 있어요!</p>
+                            <span className="n_name" key={id.writer}>{id.writer}</span>의 새로운 기사가 있어요!
                         </div>
                     )}
                     <br/>
