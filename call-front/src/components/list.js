@@ -44,11 +44,11 @@ const List =(props) => {
                     {shops && shops.map(id =>
                         <div>
                             <hr></hr>
-                            <td>매장명&nbsp;:&nbsp;</td>
+                            <td id="li_name">매장명&nbsp;:&nbsp;</td>
                             <td key={id.shop}>
                                 {id.shop}
                             </td>
-                            <td>&nbsp;|&nbsp;사업주명&nbsp;:&nbsp;</td>
+                            <td id="li_name">&nbsp;|&nbsp;사업주명&nbsp;:&nbsp;</td>
                             <td key={id.user_id}>
                                 {id.user_id}&nbsp;&nbsp;
                             </td>
