@@ -7,6 +7,7 @@ import HomeImg from "./img/home.png";
 import SearchImg from "./img/loupe.png";
 import LeafImg from "./img/leaf.png";
 import UserImg from "./img/user.png";
+import ListImg from "./img/list.png";
 
 function nav(){
     return (
@@ -25,6 +26,11 @@ function nav(){
                 <div className="nav-child">
                     <Link className="nav-link" to="/notice">
                         <img src={LeafImg} alt="Leaf" id="PageIcon"></img>
+                    </Link>
+                </div>
+                <div className="nav-child">
+                    <Link className="nav-link" to="/list">
+                        <img src={ListImg} alt="User" id="PageIcon"></img>
                     </Link>
                 </div>
                 <div className="nav-child">

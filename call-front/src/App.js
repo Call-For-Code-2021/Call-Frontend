@@ -14,7 +14,8 @@ import Notice from './components/notice';
 import MyPage from './components/mypage';
 import Register from './components/Register';
 import Admin from './components/Admin';
-
+import List from './components/list';
+import Shops from './components/shops'
 // Redirect 컴포넌트 import
 import { Route, Switch } from 'react-router-dom';
 
@@ -33,6 +34,8 @@ const App = () => {
                     <Route path="/mypage" component={MyPage} />
                     <Route path="/register" component={Register} />
                     <Route path="/admin" component={Admin} />
+                    <Route path="/shops" component={Shops}/>
+                    <Route path="/list" component={List}/>
                 </Switch>
             </div>
             <Nav/>
