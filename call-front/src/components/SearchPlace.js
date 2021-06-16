@@ -27,7 +27,7 @@ const SearchPlace = () => {
               className="form-control me-2"
               id="searchIn"
               type="search"
-              placeholder="장소를 검색하세요. Search for a place."
+              placeholder="테스트버전.장소를 검색하세요. Search for a place."
               aria-label="Search"
               onChange={onChange}
               value={inputText}
