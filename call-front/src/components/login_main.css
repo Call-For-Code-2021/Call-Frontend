@@ -1,0 +1,41 @@
+.whole_form {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.h3_o {
+    margin: 5% 0;
+}
+
+.table_form {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#input_form {
+    margin: 0 auto;
+    width: 50vw;
+    height: 5.5vh;
+    border-radius: 8px;
+    border: #686868 1px solid;
+}
+
+#btn_d {
+    margin: 0 auto;
+    width: 35vw;
+}
+
+.nav-link {
+    margin: 0;
+    padding: 0;
+}
+
+.btn_str {
+    margin: 0 auto;
+}
+
+.t-a_c {
+    text-align: center;
+}
