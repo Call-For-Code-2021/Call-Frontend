@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 const List =(props) => {
 
@@ -28,6 +29,9 @@ const List =(props) => {
 
     return(
         <div>
+            <Link to="/shops">
+                <button>가게 등록</button>
+            </Link>
             <ul>
                 {shops && shops.map( id =>
                     <li key={id.shop}><a href="#">{id.shop}</a></li>,

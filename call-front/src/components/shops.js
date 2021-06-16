@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 
 const shops = () => {
@@ -43,6 +44,11 @@ const shops = () => {
         // eslint-disable-next-line react-hooks/rules-of-hooks
         return (
             <div>
+                <div>
+                <Link to="/list">
+                    <button>back</button>
+                </Link>
+                </div>
                 <input name='shop_name' id="shop_name" onChange={onChange} placeholder="shop name"/>
                 <input name="address" id="address" onChange={onChange} placeholder="address"/>
                 <input name="user_id" id="user_id" onChange={onChange} placeholder="user_id"/>
