@@ -36,7 +36,7 @@ const List =(props) => {
             </Link>
             <ul>
                 {shops && shops.map( id =>
-                    <li key={id.shop}><a href="#">{id.shop}</a></li>,
+                    <li key={id.shop}><a href="#">{id.shop}</a></li>
                 )}
             </ul>
         </div>

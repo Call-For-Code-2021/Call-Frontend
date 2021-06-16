@@ -51,10 +51,15 @@ const shops = () => {
                 </Link>
                 </div>
                 <input name='shop_name' id="shop_name" onChange={onChange} placeholder="shop name"/>
+                {/* 가게이름 */}
                 <input name="address" id="address" onChange={onChange} placeholder="address"/>
+                {/* 가게주소 */}
                 <input name="user_id" id="user_id" onChange={onChange} placeholder="user_id"/>
+                {/* 사업자명 */}
                 <input name="shop_num" id="shop_num" onChange={onChange} placeholder="shop_num"/>
+                {/* 전화번호 */}
                 <input name="dish_type" id="dish_type" onChange={onChange} placeholder="dish_type"/>
+                {/* 그릇타입 */}
                 <button onClick={func}>register</button>
             </div>
         )//알아서 input값 받아다가 function/auth에 있는 함수들 요청 할 것
