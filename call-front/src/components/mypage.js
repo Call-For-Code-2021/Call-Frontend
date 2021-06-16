@@ -91,7 +91,7 @@ const Users = (props) => {
                         <img src={UserImg} alt="User" id="user"/>
                         <span className="UserInfo">
                             <span id="UserName">
-                                {users.username}
+                                {users.name}
                             </span>&nbsp;님
                         </span>
                         <br/>
