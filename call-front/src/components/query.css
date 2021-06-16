@@ -91,9 +91,6 @@ h5{
     height: 3vw;
 }
 
-.des_btn_con {
-
-}
 
 #btn_q {
     width: 30vw;
@@ -106,7 +103,7 @@ h5{
 }
 
 .orderlist {
-    width: 40vw;
+    width: 75vw;
 }
 
 #place_count{

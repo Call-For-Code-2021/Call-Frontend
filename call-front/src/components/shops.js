@@ -15,7 +15,7 @@ const shops = () => {
     const func = async function () {
         console.log(inputs)
         var shop = await axios({
-            url: "http://charong.herokuapp.com/buy/shop",
+            url: "//charong.herokuapp.com/buy/shop",
             method: "post",
             data: {
                 shop_name: inputs.shop_name,
