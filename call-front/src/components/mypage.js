@@ -92,7 +92,11 @@ function Users() {
                         <span className="UserInfo">
                             <span id="UserName">
                                 {/* {users.map(user => (<div key={user.id}>{user.username}</div>))} */}
-                                {Users.name}
+                                <ul>
+                                    {users && users.map( id =>
+                                        <li key={id.user}><a href="#">{id.user}</a></li>,
+                                    )}
+                                </ul>
                             </span>&nbsp;님
                         </span>
                         <br/>

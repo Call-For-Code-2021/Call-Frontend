@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import axios from "axios";
 import Cookies from "universal-cookie";
 import {Link} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './login_main.css';
 
 function Login(){
     const cookies = new Cookies();
@@ -53,25 +55,56 @@ function Login(){
     };
 
     return (
-        <div>
-            <input
-                name="userid"
-                value={userid}
-                onChange={onChange}
-            />
-            <input
-                name="userpw"
-                value={userpw}
-                type="password"
-                onChange={onChange}
-            />
-            <button onClick={handleclicklogin}>Login</button>
-            <Link className="nav-link" to="/register">
-                <button>Register</button>
-            </Link>
-            <Link className="nav-link" to="/getuserinfo">
-                <button>Userinfo</button>
-            </Link>
+        <div className="whole_form">
+            <h3 className="h3_o">로그인</h3>
+            <table className="table_form">
+                <tr>
+                    <td>
+                        <p className="t-a_c">
+                            <input
+                                name="userid"
+                                id="input_form"
+                                value={userid}
+                                onChange={onChange}
+                                placeholder="  ID"
+                            />
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p className="t-a_c">
+                            <input
+                                name="userpw"
+                                id="input_form"
+                                value={userpw}
+                                type="password"
+                                onChange={onChange}
+                                placeholder="  Password"
+                            />
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p className="t-a_c">
+                            <button onClick={handleclicklogin} id="btn_d" className="btn btn-outline-success">Login</button>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p className="t-a_c">
+                            <Link className="nav-link" to="/register">
+                                <button className="btn btn-outline-success" id="btn_d">Register</button>
+                            </Link>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <div className="btn_str">
+
+            </div>
         </div>
     );
 }
