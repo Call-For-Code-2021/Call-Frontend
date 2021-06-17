@@ -26,7 +26,7 @@ function Login(){
     const handleclicklogin = () => {
         console.log(userid);
         console.log(userpw);
-        var link = '/mypage';
+        var link = 'https://call-for-code-2021.github.io/mypage';
         axios({
             method: "post",
             url: "https://charong.herokuapp.com/auth/login",
