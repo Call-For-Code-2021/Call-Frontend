@@ -1,38 +1,78 @@
+.no_login {
+        margin-top: 3vh;
+        text-align: center;
+}
 
-#query_section { margin: 2%; padding-bottom: 5%; }
+.no_login_btn {
+        width: 10vw;
+        height: 2vw;
+}
 
-.div_my { text-align: center; }
+#query_section {
+        margin: 2%;
+        padding-bottom: 5%;
+}
 
-.leaf { margin: 1%;
-        width: 6%; }
+.div_my {
+        text-align: center;
+}
 
-.n_name { font-weight: bold; }
+.leaf {
+        margin: 1%;
+        width: 6%;
+}
 
-.news { padding: 2% 0;
-        background-color: #BFBFBF;}
+.n_name {
+        font-weight: bold;
+}
 
-.read_news { padding: 2% 0; }
+.news {
+        padding: 2% 0;
+        background-color: #BFBFBF;
+}
 
-#title { color: #8DB72A; }
+.read_news {
+        padding: 2% 0;
+}
+
+#title {
+        color: #8DB72A;
+}
     
-.profile { margin: 0 auto; width: 45%; height: 10vh; }
+.profile {
+        margin: 0 auto;
+        width: 45%;
+        height: 10vh;
+}
 
-#user { width: 30%;
-        float: left; }
+#user {
+        width: 30%;
+        float: left;
+}
 
-#edit { width: 6%;
-        float: right; }
+#edit {
+        width: 6%;
+        float: right;
+}
 
-.scrap_p { padding: 2%;
+.scrap_p {
+        padding: 2%;
         color: #000;
         text-decoration: none;
-        font-size: 13px;}
+        font-size: 13px;
+}
 
-#UserName { color: #8DB72A; font-size: 30px;}
+#UserName {
+        color: #8DB72A;
+        font-size: 30px;
+}
 
 .UserInfo {
         font-weight: bold;
-        font-size: 16px; }
+        font-size: 16px;
+}
     
-.st { margin: 5% 0 2%;
-font-size: 13px; }
+.st {
+        margin: 5% 0 2%;
+        font-size: 13px;
+}
