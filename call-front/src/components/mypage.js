@@ -107,22 +107,25 @@ const Users = (props, history) => {
                     <div className="profile">
                         <img src={UserImg} alt="User" id="user"/>
                         <span className="UserInfo">
-                            <span id="UserName">
+                            <span id="UserName" className="float_con">
                                 {users.name}
                             </span>
-                            <Link className="nav-link" to="/login">
+                            <Link className="nav-link float_con" to="/login">
                                 <button onClick={handleclicklogout} className="btn btn-outline-success">Logout</button>
                             </Link>
                         </span>
-                        <br/>
+                    </div>
+                    <p className="t-a_c">
                         <a href="/" className="scrap_p">총 스크랩 횟수 : 5번</a>
                         <a href="/"><img src={EditImg} alt="Edit" id="edit"/></a>
-                    </div>
+                    </p>
                     <br/>
                     <p className="st">{users.name} 님의 주문으로 절약된 나무</p>
-                    <img src={LeafImg} alt="Leaf" className="leaf"/>
-                    <img src={LeafImg} alt="Leaf" className="leaf"/>
-                    <img src={LeafImg} alt="Leaf" className="leaf"/>
+                    <p className="t-a_c">
+                        <img src={LeafImg} alt="Leaf" className="leaf"/>
+                        <img src={LeafImg} alt="Leaf" className="leaf"/>
+                        <img src={LeafImg} alt="Leaf" className="leaf"/>
+                    </p>
                     <p className="st">새 소식</p>
                     <Link className="nav-link" to="/notice">
                         {news && news.map(id =>
