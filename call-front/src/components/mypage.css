@@ -5,7 +5,7 @@
 
 .no_login_btn {
         width: 10vw;
-        height: 2vw;
+        height: 10vw;
 }
 
 #query_section {
@@ -41,21 +41,26 @@
     
 .profile {
         margin: 0 auto;
-        width: 45%;
+        padding-top: 10px;
+        padding-right: 20px;
+        width: 40vw;
         height: 10vh;
 }
 
 #user {
-        width: 30%;
+        width: 10vw;
         float: left;
 }
 
 #edit {
+        margin-top: 5.5px;
         width: 6%;
         float: right;
 }
 
 .scrap_p {
+        clear: both;
+        width: auto;
         padding: 2%;
         color: #000;
         text-decoration: none;
@@ -63,8 +68,13 @@
 }
 
 #UserName {
+        padding-right: 10px;
         color: #8DB72A;
-        font-size: 30px;
+        line-height: 38px;
+}
+
+.float_con {
+        float: left;
 }
 
 .UserInfo {
@@ -75,4 +85,8 @@
 .st {
         margin: 5% 0 2%;
         font-size: 13px;
+}
+
+.t_a-c {
+        text-align: center;
 }
