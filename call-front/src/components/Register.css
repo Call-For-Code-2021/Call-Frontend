@@ -1,0 +1,24 @@
+#register > input{
+    border: 1px solid rgb(56, 199, 87);
+    border-radius: 5px;
+}
+#register_lo{
+    border: 1px solid rgb(0, 0, 0);
+    margin-top: 3vh;
+    margin-left: 3vw;
+    padding: 0;
+    background-color:rgb(228, 167, 167);
+    border-radius: 5px;
+}
+#register_re{
+    border: 1px solid rgb(0, 0, 0);
+    margin-top: 3vh;
+    margin-left: 3vw;
+    padding: 0;
+    background-color:rgb(98, 245, 84);
+    border-radius: 5px;
+    
+}
+#register_bt{
+    display: inline-flex;
+}

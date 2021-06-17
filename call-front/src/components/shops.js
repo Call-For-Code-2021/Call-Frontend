@@ -68,7 +68,7 @@ const shops = () => {
                 </Link>
                 <button onClick={func} id="shop_btn">register</button></div>
             </div>
-        )//알아서 input값 받아다가 function/auth에 있는 함수들 요청 할 것
+        )
 
 }
 export default shops

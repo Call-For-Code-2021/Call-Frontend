@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from "axios";
 import {Link} from "react-router-dom";
+import "./Register.css";
 
 function Register() {
 
@@ -51,35 +52,44 @@ function Register() {
     };
 
     return (
-        <div>
+        <div id="register">
             <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
             <input
                 name="userid"
                 value={userid}
                 onChange={onChange}
+                placeholder="ID / More than 10 letters."
             />
             <input
                 name="userpw"
                 value={userpw}
                 type="password"
                 onChange={onChange}
+                placeholder="Password / Include numbers, special characters"
             />
             <input
                 name="userna"
                 value={userna}
                 onChange={onChange}
+                placeholder="User Name"
             />
             <input
                 name="userad"
                 value={userad}
                 onChange={onChange}
+                placeholder="Address"
             />
             {/*<input type="checkbox" onChange={cookieChange} checked={isRemember} />*/}
-            <button onClick={handleclick} >Register</button>
-
-            <Link className="nav-link" to="/login">
-                <button>Login</button>
-            </Link>
+            <div id="register_bt">
+                <div>
+                    <Link className="nav-link" to="/login">
+                        <button id="register_lo">Login</button>
+                    </Link>
+                </div>
+                <div>
+                    <button onClick={handleclick} id="register_re">Register</button>
+                </div>
+            </div>
         </div>
     );
 }
