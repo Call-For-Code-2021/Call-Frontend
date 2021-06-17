@@ -7,6 +7,7 @@
     background-color: white;
     margin-top:-1vh;
     padding-top: calc(env(safe-area-inset-top));
+    padding-bottom: 7vh;
 }
 #searchIn, #searchbtn {
     height:4.5vh;
