@@ -26,6 +26,7 @@ function Login(){
     const handleclicklogin = () => {
         console.log(userid);
         console.log(userpw);
+        var link = '/mypage';
         axios({
             method: "post",
             url: "https://charong.herokuapp.com/auth/login",
@@ -41,6 +42,7 @@ function Login(){
                 cookies.set('UTG', response.data['jwt_token'], {path: '/'});
                 console.log(cookies.get('UTG'));
                 alert(userid + "님 로그인되었습니다.");
+                window.location.href = link;
             }).catch((error) => {
             console.log(error);
             if(error === 400){

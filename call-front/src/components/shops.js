@@ -28,6 +28,7 @@ const shops = () => {
         })
 
         console.log(shop)
+        alert("It has been added.");
     }
 
     const onChange = (e) => {

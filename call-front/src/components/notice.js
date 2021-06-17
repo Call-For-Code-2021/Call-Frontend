@@ -44,7 +44,7 @@ const Notice =(props) => {
     return (
         <NoticeArea>
             <div className="notice">
-                <h3>오늘, <span>친환경</span> 소식</h3>
+                <h3>Today's <span>Green</span> News</h3>
                 {news && news.map(id =>
                     <article>
                         <div className="article_header">
