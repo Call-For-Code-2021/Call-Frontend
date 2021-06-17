@@ -4,8 +4,8 @@
 }
 
 .no_login_btn {
-        width: 10vw;
-        height: 10vw;
+        width: 100px;
+        height: 70px;
 }
 
 #query_section {
@@ -43,11 +43,12 @@
         margin: 0 auto;
         padding-top: 10px;
         padding-right: 20px;
-        width: 30vw;
+        width: 50vw;
         height: 10vh;
 }
 
 #user {
+        margin-top: 4vh;
         width: 10vw;
         float: left;
 }
@@ -59,9 +60,9 @@
 }
 
 .scrap_p {
-        clear: both;
+        float: left;
         width: auto;
-        padding: 2%;
+        padding-left: 5.1vw;
         color: #000;
         text-decoration: none;
         font-size: 13px;
@@ -71,15 +72,16 @@
         padding-right: 10px;
         color: #8DB72A;
         line-height: 38px;
+        text-align: center;
 }
 
 .float_le {
-        margin-left: 30px;
+        text-align: center;
         float: left;
 }
 
 .float_ri {
-        float: right;
+        float: left;
 }
 
 .UserInfo {
@@ -93,7 +95,10 @@
 }
 
 .t_a-c {
-        clear: both;
         margin: 0 auto;
         text-align: center;
+}
+
+.dd {
+        padding-left: 5.1vw;
 }
