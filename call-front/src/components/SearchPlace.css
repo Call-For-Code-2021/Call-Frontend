@@ -9,7 +9,7 @@
     padding-top: calc(env(safe-area-inset-top));
 }
 #searchIn, #searchbtn {
-    height:3vh;
+    height:4.5vh;
 }
 #searchbtn {
     line-height:0;
