@@ -106,23 +106,35 @@ const Users = (props, history) => {
                 <section>
                     <div className="profile">
                         <img src={UserImg} alt="User" id="user"/>
-                        <span className="UserInfo">
-                            <span id="UserName" className="float_le">
-                                {users.name}
-                            </span>
-                            <Link className="nav-link float_ri" to="/login">
-                                <button onClick={handleclicklogout} className="btn btn-outline-success">Logout</button>
-                            </Link>
-                        </span>
+                        <table>
+                            <tr>
+                                <td className="t-a_c">
+                                    <p className="t-a_c dd">
+                                        <span id="UserName" className="float_le">
+                                            {users.name}
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="t-a_c">
+                                    <p className="t-a_c dd">
+                                        <Link className="nav-link float_ri" to="/login">
+                                            <button onClick={handleclicklogout} className="btn btn-outline-success">Logout</button>
+                                        </Link>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <br/>
+                                    <a href="/" className="scrap_p">총 스크랩 횟수 : 5번</a>
+                                    <a href="/"><img src={EditImg} alt="Edit" id="edit"/></a>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
                     <p className="t-a_c">
-                        <a href="/" className="scrap_p">총 스크랩 횟수 : 5번</a>
-                        <a href="/"><img src={EditImg} alt="Edit" id="edit"/></a>
                     </p>
                     <br/>
                     <p className="st">{users.name} 님의 주문으로 절약된 나무</p>
