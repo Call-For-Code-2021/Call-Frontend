@@ -11,11 +11,11 @@ const List =(props) => {
     useEffect(async () =>{
         try {
             let json = await axios({
-                url: "//charong.herokuapp.com/buy/list?from=0&limit=5",
+                url: "//charong.herokuapp.com/buy/list?from=0&limit=50",
                 method: "get",
                 data: {
                     from: 0,
-                    limit: 5
+                    limit: 50
                 }
             });
             let data = [];
