@@ -58,7 +58,7 @@ function Login(){
 
     return (
         <div className="whole_form">
-            <h3 className="h3_o">로그인 trst</h3>
+            <h3 className="h3_o">로그인</h3>
             <table className="table_form">
                 <tr>
                     <td>
