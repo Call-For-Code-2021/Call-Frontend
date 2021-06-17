@@ -16,11 +16,11 @@ const Notice =(props) => {
     useEffect(async () => {
         try {
             let json = await axios({
-                url: "https://charong.herokuapp.com/news/get_all?from=0&limit=5",
+                url: "https://charong.herokuapp.com/news/get_all?from=5&limit=9",
                 method: "get",
                 data: {
-                    from: 0,
-                    limit: 5
+                    from: 5,
+                    limit: 11
                 }
             });
             let data = [];
