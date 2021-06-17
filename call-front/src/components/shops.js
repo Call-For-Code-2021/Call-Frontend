@@ -14,7 +14,7 @@ const shops = () => {
         dish_type: ""
     })
     const func = async function () {
-        console.log(inputs)
+        // console.log(inputs)
         var shop = await axios({
             url: "//charong.herokuapp.com/buy/shop",
             method: "post",
@@ -27,7 +27,7 @@ const shops = () => {
             }
         })
 
-        console.log(shop)
+        // console.log(shop)
         alert("It has been added.");
     }
 

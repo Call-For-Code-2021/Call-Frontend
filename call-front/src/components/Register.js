@@ -25,10 +25,10 @@ function Register() {
     };
 
     const handleclick = () => {
-        console.log(userid);
-        console.log(userpw);
-        console.log(userna);
-        console.log(userad);
+        // console.log(userid);
+        // console.log(userpw);
+        // console.log(userna);
+        // console.log(userad);
         axios({
             method: "post",
             url: "https://charong.herokuapp.com/auth/join",
@@ -40,9 +40,9 @@ function Register() {
             },
         })
             .then((response) => {
-                console.log(response.status)
+                // console.log(response.status)
             }).catch((error) => {
-            console.log(error);
+            // console.log(error);
         });
         // useEffect(() => {
         //     if (cookies.rememberuserid !== undefined) {

@@ -37,10 +37,10 @@ const Users = (props, history) => {
             for (let news_v in json.data) {
                 data.push(json.data[news_v])
             }
-            console.log(data);
+            // console.log(data);
             setNews(data)
         } catch (e){
-            console.log(e)
+            // console.log(e)
         }
     }, []);
 
@@ -50,18 +50,18 @@ const Users = (props, history) => {
                 setError(null);
                 setUsers(null);
                 setLoading(true);
-                console.log(cookies.get('UTG'));
+                // console.log(cookies.get('UTG'));
                 const cookieresponse = await axios({
                     method: "get",
                     url: "https://charong.herokuapp.com/auth/login?jwt_token=" + cookies.get('UTG'),
                 });
-                console.log(cookieresponse.data);
-                console.log(cookieresponse.data['id']);
+                // console.log(cookieresponse.data);
+                // console.log(cookieresponse.data['id']);
                 const response = await axios({
                     method: "get",
                     url: "https://charong.herokuapp.com/auth/get_user?id="+cookieresponse.data['id'],
                 });
-                console.log(response.data);
+                // console.log(response.data);
                 setUsers(response.data);
             } catch (e) {
                 setError(e);

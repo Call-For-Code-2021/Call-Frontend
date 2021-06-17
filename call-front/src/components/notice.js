@@ -27,10 +27,10 @@ const Notice =(props) => {
             for (let news_v in json.data) {
                 data.push(json.data[news_v])
             }
-            console.log(data);
+            // console.log(data);
             setNews(data)
         } catch (e){
-            console.log(e)
+            // console.log(e)
         }
     }, []);
 

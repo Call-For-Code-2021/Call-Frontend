@@ -21,10 +21,10 @@ function Admin() {
     };
 
     const handleclickpostnews = () => {
-        console.log(newstitle);
-        console.log(newsdate);
-        console.log(newsauthor);
-        console.log(newsdescript);
+        // console.log(newstitle);
+        // console.log(newsdate);
+        // console.log(newsauthor);
+        // console.log(newsdescript);
         axios({
             method: "post",
             url: "https://charong.herokuapp.com/newspost",
@@ -36,8 +36,8 @@ function Admin() {
             },
         })
             .then((response) => {
-                console.log(response.status);
-                console.log(response.data);
+                // console.log(response.status);
+                // console.log(response.data);
                 alert(newstitle + "뉴스의 등록이 완료되었습니다.");
             })
     }

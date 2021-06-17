@@ -22,10 +22,10 @@ const List =(props) => {
             for (let shop in json.data) {
                 data.push(json.data[shop])
             }
-            console.log(data)
+            // console.log(data)
             setList(data)
         }catch(e){
-            console.log(e);
+            // console.log(e);
         }
     }, []);
 

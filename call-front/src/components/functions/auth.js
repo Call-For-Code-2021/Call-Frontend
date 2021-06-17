@@ -46,7 +46,7 @@ async function join(id, password, name, address){
     }).then(function(response){
         return response; //성공 했으면 redirect to login page
      }).catch(function (error){
-         console.log(error)//실패시 alert 띄우기
+         // console.log(error)//실패시 alert 띄우기
      });
 }
 function deleteUser(id, password){
@@ -59,6 +59,6 @@ function deleteUser(id, password){
     }).then(function(response){
 
     }).catch(function(error){
-        console.log(error);
+        // console.log(error);
     })
 }
