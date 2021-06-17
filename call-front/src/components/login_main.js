@@ -45,14 +45,14 @@ function Login(){
                 // window.location.href = link;
             }).catch((error) => {
             console.log(error);
-            alert("다시 로그인해 주십시오.");
+            alert("다시 로그인해 주십시오. Re Login Plz");
             if(error === 400){
                 console.log("로그인 형식 오류");
-                alert("로그인 형식이 잘못되었습니다.");
+                alert("로그인 형식이 잘못되었습니다. Login Failed ");
             }
             else if(error === 401) {
                 console.log("로그인 실패");
-                alert("로그인 트래픽 증가로 로그인에 실패했습니다.\n잠시 후 다시 시도해 주십시오.");
+                alert("로그인 트래픽 증가로 로그인에 실패했습니다.\n잠시 후 다시 시도해 주십시오.\nLogin failed due to increased login traffic.\nPlease try again shortly.");
             }
         });
     };
