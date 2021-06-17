@@ -26,7 +26,7 @@ function Login(){
     const handleclicklogin = () => {
         console.log(userid);
         console.log(userpw);
-        var link = 'https://call-for-code-2021.github.io/mypage';
+        // var link = 'https://call-for-code-2021.github.io/mypage';
         axios({
             method: "post",
             url: "https://charong.herokuapp.com/auth/login",
@@ -42,7 +42,7 @@ function Login(){
                 cookies.set('UTG', response.data['jwt_token'], {path: '/'});
                 console.log(cookies.get('UTG'));
                 alert(userid + "님 로그인되었습니다.");
-                window.location.href = link;
+                // window.location.href = link;
             }).catch((error) => {
             console.log(error);
             if(error === 400){
@@ -58,7 +58,7 @@ function Login(){
 
     return (
         <div className="whole_form">
-            <h3 className="h3_o">로그인</h3>
+            <h3 className="h3_o">로그인 trst</h3>
             <table className="table_form">
                 <tr>
                     <td>
