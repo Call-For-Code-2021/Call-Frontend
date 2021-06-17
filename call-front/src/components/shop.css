@@ -1,0 +1,23 @@
+#shop_btn{
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: rgb(128, 221, 99);
+    border: 1px solid;
+    border-radius: 6px;
+    margin: 2vh;
+}
+#shop_btn_back{
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: rgb(240, 216, 202);
+    border: 1px solid;
+    border-radius: 6px;
+    margin: 2vh;
+}
+div > div > input{
+    width:80vw;
+    margin-left: 2vh;
+    margin-top: 2vh;
+}
