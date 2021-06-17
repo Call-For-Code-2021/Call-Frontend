@@ -10,7 +10,7 @@ import LeafImg from "./img/leaf.png";
 import UserImg from "./img/user.png";
 import EditImg from "./img/edit.png";
 
-const Users = (props) => {
+const Users = (props, history) => {
 
     const cookies = new Cookies();
 
@@ -95,7 +95,7 @@ const Users = (props) => {
     if(loading)
         return <div>On Loading...</div>;
     if(error)
-        return <div>Error Occurred</div>;
+        return <p className="no_login"><button className="no_login_btn btn btn-outline-success" onClick={() => props.history.push('/login')}>Login required</button></p>;
     if(!users)
         return null;
 
