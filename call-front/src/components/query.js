@@ -82,18 +82,18 @@ const MapContainer = ({ searchPlace }) => {
       <meta name='viewport' content='initial-scale=1, viewport-fit=cover'></meta>
       <div id="place_page_bg">
         <div id="place_page">
-          <img src={Logo} id="el_main"></img>
-          <button onClick={() => document.getElementById("place_page_bg").style.visibility="hidden"} id="X_box"><img src={X} id="X"></img></button>
+          <img src={Logo} id="el_main" alt="Logo"></img>
+          <button onClick={() => document.getElementById("place_page_bg").style.visibility="hidden"} id="X_box"><img src={X} id="X" alt="X"></img></button>
           <h3>엘카페 커피로스터스</h3>
           <h5>카페</h5>
           
           <div id="star_sum">
             <div id = "jum">4.0</div>
-            <img src={Star} id="star"/>
-            <img src={Star} id="star"/>
-            <img src={Star} id="star"/>
-            <img src={Star} id="star"/>
-            <img src={Star_none} id="star"/>
+            <img src={Star} id="star" alt="star"/>
+            <img src={Star} id="star" alt="star"/>
+            <img src={Star} id="star" alt="star"/>
+            <img src={Star} id="star" alt="star"/>
+            <img src={Star_none} id="star" alt="star"/>
           </div>
           <table className="des_table">
               <tr>
@@ -141,14 +141,14 @@ const MapContainer = ({ searchPlace }) => {
 
                {item.road_address_name ? (
                  <div>
-                   <img src={Ping} id="ping"></img>
+                   <img src={Ping} id="ping" alt="ping"></img>
                    <span>{item.road_address_name}</span>
                     <span>{item.address_name}</span>
                  </div>
                 ) : (
                   <span>{item.address_name}</span>
                 )}
-               <span><img src={Call} id="call"></img>{item.phone}</span>
+               <span><img src={Call} id="call" alt="Call"></img>{item.phone}</span>
              </div>
             </div>
           ))}

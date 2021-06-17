@@ -107,14 +107,19 @@ const Users = (props, history) => {
                     <div className="profile">
                         <img src={UserImg} alt="User" id="user"/>
                         <span className="UserInfo">
-                            <span id="UserName" className="float_con">
+                            <span id="UserName" className="float_le">
                                 {users.name}
                             </span>
-                            <Link className="nav-link float_con" to="/login">
+                            <Link className="nav-link float_ri" to="/login">
                                 <button onClick={handleclicklogout} className="btn btn-outline-success">Logout</button>
                             </Link>
                         </span>
                     </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                     <p className="t-a_c">
                         <a href="/" className="scrap_p">총 스크랩 횟수 : 5번</a>
                         <a href="/"><img src={EditImg} alt="Edit" id="edit"/></a>

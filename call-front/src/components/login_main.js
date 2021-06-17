@@ -45,6 +45,7 @@ function Login(){
                 // window.location.href = link;
             }).catch((error) => {
             console.log(error);
+            alert("다시 로그인해 주십시오.");
             if(error === 400){
                 console.log("로그인 형식 오류");
                 alert("로그인 형식이 잘못되었습니다.");
