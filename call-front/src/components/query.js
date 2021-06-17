@@ -14,8 +14,6 @@ import Order from './img/orderlist.jpg';
 
 const { kakao } = window
 
-
-
 const MapContainer = ({ searchPlace }) => {
 
   // 검색결과 배열에 담아줌
