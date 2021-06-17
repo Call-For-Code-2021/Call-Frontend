@@ -90,7 +90,9 @@ function Login(){
                 <tr>
                     <td>
                         <p className="t-a_c">
-                            <button onClick={handleclicklogin} id="btn_d" className="btn btn-outline-success">Login</button>
+                            <Link className="nav-link" to="/map_main">
+                                <button onClick={handleclicklogin} id="btn_d" className="btn btn-outline-success">Login</button>
+                            </Link>
                         </p>
                     </td>
                 </tr>
